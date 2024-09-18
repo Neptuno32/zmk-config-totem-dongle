@@ -24,17 +24,9 @@
 #define Game        8
 #define Gameplus    9
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
 &lt {
     tapping-term-ms = <240>;
     flavor = "balanced";
-    quick-tap-ms = <150>;
 };
 
 / {
@@ -44,9 +36,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
+            tapping-term-ms = <240>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -113,6 +103,15 @@
              &trans          &kp DELETE  &trans            &kp K_UNDO  &kp K_REDO     &trans       &kp LEFT          &kp DOWN    &kp UP       &kp RIGHT
 &kp K_SLEEP  &kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp K_CUT   &kp K_PASTE    &trans       &trans            &trans      &trans       &trans     &trans
                                          &trans            &trans      &trans         &kp C_PREV   &kp C_PLAY_PAUSE  &kp C_NEXT
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
