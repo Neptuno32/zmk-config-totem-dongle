@@ -36,7 +36,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <220>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -51,7 +51,7 @@
             bindings = <
         &kp Q       &kp W           &kp F        &kp P         &kp G        &kp J        &kp L         &kp U         &kp Y           &kp SEMI
         &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LSHIFT T  &kp D        &kp H        &hm LSHIFT N  &hm LCTRL E   &hm LEFT_ALT I  &hm LGUI O
-&tog 1  &kp Z       &kp X           &kp C        &kp V         &kp B        &kp K        &kp M         &kp COMMA     &kp DOT         &kp SLASH   &kp APOSTROPHE
+&tog 1  &kp Z       &kp X           &kp C        &kp V         &kp B        &kp K        &kp M         &kp COMMA     &kp DOT         &kp SLASH   &tog 6
                                     &kp ESCAPE   &lt 5 TAB     &kp SPACE    &lt 3 ENTER  &lt 2 BSPC    &lt 4 DELETE
             >;
         };
@@ -103,6 +103,16 @@
         &trans          &kp DELETE  &trans            &kp K_UNDO  &kp K_REDO     &trans       &kp LEFT          &kp DOWN    &kp UP       &kp RIGHT
 &trans  &kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp K_CUT   &kp K_PASTE    &trans       &trans            &trans      &trans       &trans     &trans
                                     &trans            &trans      &trans         &kp C_PREV   &kp C_PLAY_PAUSE  &kp C_NEXT
+            >;
+        };
+
+        Focus {
+            label = "Focus";
+            bindings = <
+        &kp Q       &kp W           &kp F        &kp P         &kp G        &kp J        &kp L         &kp U         &kp Y           &kp SEMI
+        &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LSHIFT T  &kp D        &kp H        &hm LSHIFT N  &hm LCTRL E   &hm LEFT_ALT I  &hm LGUI O
+&trans  &kp Z       &kp X           &kp C        &kp V         &kp B        &kp K        &kp M         &kp COMMA     &kp DOT         &kp SLASH   &tog 6
+                                    &kp ESCAPE   &lt 5 TAB     &kp SPACE    &lt 3 ENTER  &lt 2 BSPC    &lt 4 DELETE
             >;
         };
     };
