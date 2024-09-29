@@ -49,10 +49,10 @@
         Base {
             label = "Base";
             bindings = <
-        &kp Q       &kp W           &kp F        &kp P         &kp G        &kp J        &kp L         &kp U         &kp Y           &kp SEMI
-        &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LSHIFT T  &kp D        &kp H        &hm LSHIFT N  &hm LCTRL E   &hm LEFT_ALT I  &hm LGUI O
-&tog 1  &kp Z       &kp X           &kp C        &kp V         &kp B        &kp K        &kp M         &kp COMMA     &kp DOT         &kp SLASH   &tog 6
-                                    &kp ESCAPE   &lt 5 TAB     &kp SPACE    &lt 3 ENTER  &lt 2 BSPC    &lt 4 DELETE
+        &kp Q       &kp W           &kp F        &kp P         &kp G        &kp J        &kp L            &kp U         &kp Y           &kp SEMI
+        &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LSHIFT T  &kp D        &kp H        &hm LSHIFT N     &hm LCTRL E   &hm LEFT_ALT I  &hm LGUI O
+&tog 1  &kp Z       &kp X           &kp C        &kp V         &kp B        &kp K        &kp M            &kp COMMA     &kp DOT         &kp SLASH   &kp BACKSLASH
+                                    &kp ESCAPE   &lt 5 TAB     &kp SPACE    &lt 3 ENTER  &lt 2 BACKSPACE  &lt 4 DELETE
             >;
         };
 
@@ -106,13 +106,12 @@
             >;
         };
 
-        Focus {
-            label = "Focus";
+        layer_6 {
             bindings = <
-        &kp Q       &kp W           &kp F        &kp P         &kp G        &kp J        &kp L         &kp U         &kp Y           &kp SEMI
-        &hm LGUI A  &hm LEFT_ALT R  &hm LCTRL S  &hm LSHIFT T  &kp D        &kp H        &hm LSHIFT N  &hm LCTRL E   &hm LEFT_ALT I  &hm LGUI O
-&trans  &kp Z       &kp X           &kp C        &kp V         &kp B        &kp K        &kp M         &kp COMMA     &kp DOT         &kp SLASH   &tog 6
-                                    &kp ESCAPE   &lt 5 TAB     &kp SPACE    &lt 3 ENTER  &lt 2 BSPC    &lt 4 DELETE
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
