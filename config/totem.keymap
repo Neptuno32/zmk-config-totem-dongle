@@ -59,19 +59,19 @@
         Num {
             label = "Num";
             bindings = <
-        &kp RIGHT_BRACKET  &kp N7        &kp N8        &kp N9        &kp LEFT_BRACKET        &trans  &trans          &trans            &trans         &trans
-        &kp N0             &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL               &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT  &kp LEFT_GUI
-&trans  &kp GRAVE          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NON_US_BACKSLASH    &trans  &trans          &trans            &trans         &trans        &trans
-                                         &trans        &kp PERIOD    &kp MINUS               &trans  &kp DOT         &trans
+       &kp RIGHT_BRACKET  &kp N7        &kp N8        &kp N9        &kp LEFT_BRACKET        &none   &none           &none             &none          &none
+       &kp N0             &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL               &none   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT  &kp LEFT_GUI
+&none  &kp GRAVE          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NON_US_BACKSLASH    &none   &none           &none             &none          &none         &none
+                                        &trans        &kp PERIOD    &kp MINUS               &trans  &trans          &trans
             >;
         };
 
         Edit {
             bindings = <
-        &trans     &trans   &kp PRINTSCREEN  &trans     &trans       &trans  &trans  &trans  &trans  &trans
-        &kp LC(X)  &kp DEL  &kp LC(Z)        &kp LC(Y)  &kp LC(C)    &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans   &trans           &kp LC(V)  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans           &trans     &trans       &trans  &trans  &trans
+       &none      &none    &kp PRINTSCREEN  &none      &none        &none  &none  &none  &none  &none
+       &kp LC(X)  &kp DEL  &kp LC(Z)        &kp LC(Y)  &kp LC(C)    &none  &none  &none  &none  &none
+&none  &none      &none    &none            &kp LC(V)  &none        &none  &none  &none  &none  &none  &none
+                           &none            &trans     &none        &none  &none  &none
             >;
 
             label = "Edit";
@@ -79,10 +79,10 @@
 
         Nav {
             bindings = <
-        &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT    &kp LC(Z)        &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Y)
-        &kp LGUI        &kp LALT           &kp LCTRL    &kp LSHIFT       &trans        &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &trans          &trans             &trans       &trans           &trans        &kp INSERT       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
-                                           &trans       &trans           &trans        &kp ENTER        &kp BACKSPACE   &kp DELETE
+       &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT    &kp LC(Z)        &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Y)
+       &kp LGUI        &kp LALT           &kp LCTRL    &kp LSHIFT       &none         &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&none  &kp LA(F4)      &none              &kp F11      &kp F5           &none         &kp INSERT       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
+                                          &none        &none            &trans        &trans           &trans          &trans
             >;
 
             label = "Nav";
@@ -90,10 +90,10 @@
 
         Sym {
             bindings = <
-        &kp RIGHT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp LEFT_BRACE    &trans  &trans          &trans            &trans         &trans
-        &kp COLON        &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS          &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT  &kp LEFT_GUI
-&trans  &kp TILDE        &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE          &trans  &trans          &trans            &trans         &trans        &trans
-                                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &trans  &trans          &trans
+       &kp RIGHT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp LEFT_BRACE    &none   &none           &none             &none          &none
+       &kp COLON        &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS          &none   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT  &kp LEFT_GUI
+&none  &kp TILDE        &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE          &none   &none           &none             &none          &none         &none
+                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &trans  &none           &none
             >;
 
             label = "Sym";
@@ -102,10 +102,10 @@
         Fun {
             label = "Fun";
             bindings = <
-        &kp F12  &kp F7  &kp F8  &kp F9  &trans    &trans  &kp F11     &kp LA(F4)  &kp F5         &trans
-        &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans  &kp LSHIFT  &kp LCTRL   &kp RIGHT_ALT  &kp LGUI
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans  &trans      &trans      &trans         &trans    &trans
-                         &trans  &trans  &trans    &trans  &trans      &trans
+       &kp F12  &kp F7  &kp F8  &kp F9  &none    &none  &kp F5      &kp LA(F4)  &kp F11        &none
+       &kp F11  &kp F4  &kp F5  &kp F6  &none    &none  &kp LSHIFT  &kp LCTRL   &kp RIGHT_ALT  &kp LGUI
+&none  &kp F10  &kp F1  &kp F2  &kp F3  &none    &none  &none       &none       &none          &none     &none
+                        &none   &none   &none    &none  &none       &trans
             >;
         };
     };
