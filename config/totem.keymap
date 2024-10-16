@@ -49,10 +49,10 @@
         Base {
             label = "Base";
             bindings = <
-          &kp Q           &kp W            &kp E               &kp R             &kp T          &kp Y         &kp U             &kp I               &kp O           &kp P
-          &hm LEFT_GUI A  &hm RIGHT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G          &kp H         &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMICOLON
-&kp CAPS  &kp Z           &kp X            &kp C               &kp V             &kp B          &kp N         &kp M             &kp COMMA           &kp DOT         &kp SLASH               &kp BACKSLASH
-                                           &lt 3 ESCAPE        &lt 1 TAB         &lt 2 SPACE    &lt 5 RETURN  &lt 4 BACKSPACE   &kp DELETE
+          &kp Q           &kp W            &kp E               &kp R             &kp T          &kp Y       &kp U             &kp I               &kp O           &kp P
+          &hm LEFT_GUI A  &hm RIGHT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G          &kp H       &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMICOLON
+&kp CAPS  &kp Z           &kp X            &kp C               &kp V             &kp B          &kp N       &kp M             &kp COMMA           &kp DOT         &kp SLASH               &kp BACKSLASH
+                                           &lt 3 ESCAPE        &lt 1 TAB         &lt 2 SPACE    &kp RETURN  &lt 4 BACKSPACE   &kp DELETE
             >;
         };
 
@@ -98,17 +98,6 @@
             >;
 
             label = "Nav";
-        };
-
-        NavAlt {
-            bindings = <
-       &kp LC(Z)       &kp LC(X)     &kp LC(C)       &kp LC(V)   &kp LC(Y)       &none   &none           &none             &none         &none
-       &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp CAPSLOCK    &none   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI
-&none  &kp END         &kp PAGE_UP   &kp PAGE_DOWN   &kp HOME    &kp INSERT      &none   &none           &none             &none         &none         &none
-                                     &none           &kp DELETE  &none           &trans  &none           &none
-            >;
-
-            label = "NavAlt";
         };
     };
 };
