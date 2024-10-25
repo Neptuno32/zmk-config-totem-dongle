@@ -49,10 +49,10 @@
         Base {
             label = "Base";
             bindings = <
-              &kp Q                  &kp W           &kp E               &kp R             &kp T          &kp Y       &kp U             &kp I               &kp O           &kp P
-              &hm LEFT_GUI CAPSLOCK  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G          &kp H       &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI APOSTROPHE
-&kp LEFT_GUI  &kp Z                  &kp X           &kp C               &kp V             &kp B          &kp N       &kp M             &kp COMMA           &kp DOT         &kp SEMI                 &tog 5
-                                                     &lt 3 ESCAPE        &lt 1 TAB         &lt 2 SPACE    &kp RETURN  &lt 4 BACKSPACE   &lt 3 DELETE
+              &kp Q       &kp W           &kp E               &kp R             &kp T          &kp Y       &kp U             &kp I               &kp O           &kp P
+              &hm CAPS A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G          &kp H       &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI APOSTROPHE
+&kp LEFT_GUI  &kp Z       &kp X           &kp C               &kp V             &kp B          &kp N       &kp M             &kp COMMA           &kp DOT         &kp SEMI                 &tog 5
+                                          &lt 3 ESCAPE        &lt 1 TAB         &lt 2 SPACE    &kp RETURN  &lt 4 BACKSPACE   &lt 3 DELETE
             >;
         };
 
@@ -102,10 +102,10 @@
 
         layer_5 {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &kp SPACE    &trans  &trans  &trans
+        &trans        &trans        &trans            &trans          &trans       &trans  &trans  &trans  &trans  &trans
+        &kp CAPSLOCK  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans            &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans            &trans          &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
