@@ -49,28 +49,19 @@
         Base {
             label = "Base";
             bindings = <
-              &kp Q       &kp W           &kp E               &kp R             &kp T          &kp Y       &kp U             &kp I               &kp O           &kp P
-              &hm CAPS A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G          &kp H       &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI APOSTROPHE
-&kp LEFT_GUI  &kp Z       &kp X           &kp C               &kp V             &kp B          &kp N       &kp M             &kp COMMA           &kp DOT         &kp SEMI                 &tog 1
-                                          &lt 4 ESCAPE        &lt 2 TAB         &lt 3 SPACE    &kp RETURN  &lt 5 BACKSPACE   &lt 4 DELETE
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-        &kp TAB         &kp Q  &kp N3      &kp E    &kp R        &trans  &trans  &trans  &trans  &trans
-        &kp LEFT_SHIFT  &kp A  &kp W       &kp D    &kp F        &trans  &trans  &trans  &trans  &trans
-&trans  &kp CAPSLOCK    &kp Z  &kp S       &kp C    &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                               &kp ESCAPE  &kp TAB  &kp SPACE    &trans  &trans  &trans
+              &kp Q              &kp W            &kp E               &kp R             &kp T          &kp Y       &kp U             &kp I               &kp O            &kp P
+              &hm CAPS LEFT_GUI  &hm RIGHT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G          &kp H       &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm RIGHT_ALT L  &hm LEFT_GUI DOT
+&kp CAPSLOCK  &kp Z              &kp X            &kp C               &kp V             &kp B          &kp N       &kp M             &kp COMMA           &kp APOSTROPHE   &kp SEMI          &tog 5
+                                                  &lt 3 TAB           &lt 1 SPACE       &lt 2 ENTER    &kp DELETE  &lt 4 ESCAPE      &lt 3 BACKSPACE
             >;
         };
 
         Num {
             bindings = <
-       &none      &none      &none      &none      &none        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT
-       &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI
-&none  &none      &none      &kp F5     &none      &none        &kp SLASH  &kp N1  &kp N2   &kp N3  &kp APOSTROPHE  &none
-                             &none      &trans     &none        &kp MINUS  &kp N0  &kp DOT
+       &none         &none         &none             &none           &none    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI
+&none  &none         &none         &none             &none           &none    &kp SLASH  &kp N1  &kp N2   &kp N3  &kp APOSTROPHE  &none
+                                   &none             &trans          &none    &kp MINUS  &kp N0  &kp DOT
             >;
 
             label = "Num";
@@ -78,10 +69,10 @@
 
         SymEdit {
             bindings = <
-       &none           &none              &none             &none            &none         &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
-       &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT    &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
-&none  &none           &none              &kp LA(F4)        &kp F11          &none         &kp PIPE        &kp EXCLAMATION       &kp AT_SIGN            &kp HASH              &kp TILDE        &none
-                                          &none             &none            &trans        &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+       &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp PRINTSCREEN  &kp C_NEXT           &none        &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
+       &kp LC(Y)         &kp LC(Z)          &kp LC(C)        &kp LC(C_VOLUME_UP)  &kp LC(Y)    &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
+&none  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp LC(X)        &kp C_VOLUME_UP      &none        &kp PIPE        &kp EXCLAMATION       &kp AT_SIGN            &kp HASH              &kp TILDE        &none
+                                            &none            &none                &trans       &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
             >;
 
             label = "SymEdit";
@@ -89,10 +80,10 @@
 
         Fun {
             bindings = <
-       &none         &none         &none             &none           &none    &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12
-       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11
-&none  &none         &none         &none             &none           &none    &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &none
-                                   &trans            &none           &none    &none            &none   &trans
+       &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none    &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12
+       &kp N0   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none    &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11
+&none  &kp DOT  &kp N7        &kp N8        &kp N9        &none    &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &none
+                              &trans        &none         &none    &none            &none   &trans
             >;
 
             label = "Fun";
@@ -100,13 +91,20 @@
 
         Nav {
             bindings = <
-       &kp LC(Z)       &kp LC(X)     &kp LC(C)       &kp LC(V)   &kp LC(Y)       &none  &none           &none             &none         &none
-       &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp CAPSLOCK    &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI
-&none  &kp END         &kp PAGE_UP   &kp PAGE_DOWN   &kp HOME    &kp INSERT      &none  &none           &none             &none         &none         &none
-                                     &none           &kp DELETE  &none           &none  &trans          &none
+       &none         &none         &none             &none           &none    &none  &none     &none     &none   &none
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
+&none  &none         &none         &none             &none           &none    &none  &none     &none     &none   &none      &none
+                                   &none             &none           &none    &none  &trans    &none
             >;
+        };
 
-            label = "Nav";
+        Sai {
+            bindings = <
+        &trans  &trans        &trans            &trans          &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans            &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans            &kp SPACE       &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
