@@ -69,10 +69,10 @@
 
         SymEdit {
             bindings = <
-       &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp PRINTSCREEN  &kp C_NEXT           &none        &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
-       &kp LC(Y)         &kp LC(Z)          &kp LC(C)        &kp LC(C_VOLUME_UP)  &kp LC(Y)    &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
-&none  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp LC(X)        &kp C_VOLUME_UP      &none        &kp PIPE        &kp EXCLAMATION       &kp AT_SIGN            &kp HASH              &kp TILDE        &none
-                                            &none            &none                &trans       &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+       &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp PRINTSCREEN  &kp C_NEXT       &none        &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
+       &kp LC(Y)         &kp LC(Z)          &kp LC(C)        &kp LC(V)        &kp LC(Y)    &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
+&none  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp LC(X)        &kp C_VOLUME_UP  &none        &kp PIPE        &kp EXCLAMATION       &kp AT_SIGN            &kp HASH              &kp TILDE        &none
+                                            &none            &none            &trans       &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
             >;
 
             label = "SymEdit";
