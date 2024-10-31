@@ -49,10 +49,10 @@
         Base {
             label = "Base";
             bindings = <
-              &kp Q           &kp W            &kp E               &kp R             &kp T          &kp Y       &kp U             &kp I               &kp O            &kp P
-              &hm LEFT_GUI A  &hm RIGHT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G          &kp H       &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm RIGHT_ALT L  &hm LEFT_GUI SEMICOLON
-&kp CAPSLOCK  &kp Z           &kp X            &kp C               &kp V             &kp B          &kp N       &kp M             &kp COMMA           &kp DOT          &kp APOSTROPHE          &to 5
-                                               &lt 3 TAB           &lt 1 SPACE       &lt 2 ENTER    &kp ESCAPE  &lt 4 BACKSPACE   &lt 3 DELETE
+              &kp Q           &kp W            &kp E               &kp R             &kp T           &kp Y    &kp U             &kp I               &kp O            &kp P
+              &hm LEFT_GUI A  &hm RIGHT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H    &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm RIGHT_ALT L  &hm LEFT_GUI SEMICOLON
+&kp CAPSLOCK  &kp Z           &kp X            &kp C               &kp V             &kp B           &kp N    &kp M             &kp COMMA           &kp DOT          &kp APOSTROPHE          &to 5
+                                               &lt 3 TAB           &lt 1 SPACE       &lt 2 ESCAPE    &kp RET  &lt 4 BACKSPACE   &lt 3 DELETE
             >;
         };
 
@@ -109,10 +109,10 @@
 
         layer_6 {
             bindings = <
-         &kp TAB       &kp Q  &kp NUMBER_3  &kp E      &kp R               &none  &none  &none  &none  &none
-         &kp LSHFT     &kp A  &kp W         &kp D      &kp F               &none  &none  &none  &none  &none
-&kp ESC  &kp CAPSLOCK  &kp Z  &kp S         &kp C      &kp V               &none  &none  &none  &none  &none  &to 0
-                              &kp X         &kp SPACE  &kp LEFT_CONTROL    &none  &none  &none
+         &kp TAB       &kp Q  &kp NUMBER_3  &kp E      &kp R               &none  &none     &none     &none      &none
+         &kp LSHFT     &kp A  &kp W         &kp D      &kp F               &none  &kp LEFT  &kp UP    &kp RIGHT  &none
+&kp ESC  &kp CAPSLOCK  &kp Z  &kp S         &kp C      &kp V               &none  &none     &kp DOWN  &none      &none  &to 0
+                              &kp X         &kp SPACE  &kp LEFT_CONTROL    &none  &none     &none
             >;
         };
     };
