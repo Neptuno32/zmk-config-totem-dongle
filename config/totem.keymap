@@ -91,10 +91,10 @@
 
         Nav {
             bindings = <
-       &none     &none     &none         &none      &none     &none  &none               &none          &none       &none
-       &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none     &none  &kp LC(LEFT_SHIFT)  &kp BACKSPACE  &kp DELETE  &kp LEFT_CONTROL
-&none  &none     &none     &none         &none      &none     &none  &none               &none          &none       &none             &none
-                           &trans        &trans     &trans    &none  &trans              &none
+       &none     &none     &none         &none      &none     &none  &none             &none               &none               &none
+       &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none     &none  &kp LEFT_CONTROL  &kp LC(LEFT_SHIFT)  &kp LC(LEFT_SHIFT)  &kp LC(LEFT_SHIFT)
+&none  &none     &none     &none         &none      &none     &none  &none             &none               &none               &none               &none
+                           &trans        &trans     &trans    &none  &trans            &none
             >;
         };
 
