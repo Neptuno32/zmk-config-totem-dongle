@@ -49,65 +49,73 @@
         Base {
             label = "Base";
             bindings = <
-            &kp Q           &kp W            &kp E               &kp R             &kp T              &kp Y       &kp U             &kp I               &kp O           &kp P
-            &hm LEFT_GUI A  &hm RIGHT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G              &kp H       &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm RIGHT_ALT APOSTROPHE
-&kp ESCAPE  &kp Z           &kp X            &kp C               &kp V             &kp B              &kp N       &kp M             &kp COMMA           &kp DOT         &kp SINGLE_QUOTE          &to 5
-                                             &lt 3 DELETE        &lt 1 SPACE       &lt 2 BACKSPACE    &kp ESCAPE  &lt 4 ENTER       &lt 3 TAB
+            &kp Q           &kp W            &kp E               &kp R             &kp T        &kp Y    &kp U             &kp I               &kp O           &kp P
+            &hm LEFT_GUI A  &hm RIGHT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G        &kp H    &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm RIGHT_ALT SEMICOLON
+&kp ESCAPE  &kp Z           &kp X            &kp C               &kp V             &kp B        &kp N    &kp M             &kp COMMA           &kp DOT         &kp SLASH                &to 6
+                                             &lt 3 ESCAPE        &lt 1 SPACE       &lt 7 TAB    &kp RET  &lt 5 BACKSPACE   &lt 2 DELETE
             >;
         };
 
         Num {
             bindings = <
-       &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp PRINTSCREEN  &kp C_NEXT       &none        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT
-       &kp LC(Y)         &kp LC(Z)          &kp LC(C)        &kp LC(V)        &kp LC(Y)    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp COLON
-&none  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp LC(X)        &kp C_VOLUME_UP  &none        &kp SLASH  &kp N1  &kp N2   &kp N3  &kp DOUBLE_QUOTES  &none
-                                            &none            &trans           &none        &kp MINUS  &kp N0  &kp DOT
+       &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp PRINTSCREEN  &kp C_NEXT       &none        &kp PLUS      &kp N7  &kp N8   &kp N9  &kp MINUS
+       &kp LC(Y)         &kp LC(Z)          &kp LC(C)        &kp LC(V)        &kp LC(Y)    &kp ASTERISK  &kp N4  &kp N5   &kp N6  &kp COLON
+&none  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp LC(X)        &kp C_VOLUME_UP  &none        &kp CARET     &kp N1  &kp N2   &kp N3  &none      &none
+                                            &none            &trans           &none        &kp EQUAL     &kp N0  &kp DOT
             >;
 
             label = "Num";
         };
 
-        Sym {
+        SymL {
             bindings = <
-       &none    &none          &none        &none     &none      &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
-       &kp END  &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME  &kp INS    &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp DOUBLE_QUOTES
-&none  &none    &none          &none        &none     &none      &kp PIPE        &kp EXCLAMATION       &kp AT_SIGN            &kp HASH              &kp TILDE          &none
-                               &none        &none     &trans     &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+       &kp EXCLAMATION  &kp AT_SIGN     &kp HASH   &kp DOLLAR       &kp PERCENT         &none  &none           &none             &none         &none
+       &kp LESS_THAN    &kp LEFT_BRACE  &kp TILDE  &kp RIGHT_BRACE  &kp GREATER_THAN    &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI
+&none  &none            &none           &none      &none            &none               &none  &none           &none             &none         &none         &none
+                                        &kp MINUS  &kp UNDERSCORE   &none               &none  &none           &trans
             >;
+        };
 
-            label = "Sym";
+        SymR {
+            bindings = <
+       &none         &none         &none             &none           &none    &kp CARET  &kp AMPERSAND         &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE   &kp QUESTION
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp SLASH  &kp LEFT_BRACKET      &kp ASTERISK       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
+&none  &none         &none         &none             &none           &none    &none      &none                 &none              &none              &none                  &none
+                                   &trans            &none           &none    &none      &kp LEFT_PARENTHESIS  &kp BACKSLASH
+            >;
         };
 
         Fun {
             bindings = <
-       &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none    &none  &kp F7        &kp F8  &kp F9  &kp F12
-       &kp N0   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none    &none  &kp F4        &kp F5  &kp F6  &kp F11
-&none  &kp DOT  &kp N7        &kp N8        &kp N9        &none    &none  &kp F1        &kp F2  &kp F3  &kp F10  &none
-                              &trans        &kp MINUS     &none    &none  &kp LEFT_ALT  &trans
+       &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS    &none         &kp F7        &kp F8  &kp F9  &kp F12
+       &kp N0     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none       &kp CAPSLOCK  &kp F4        &kp F5  &kp F6  &kp F11
+&none  &kp DOT    &kp N7        &kp N8        &kp N9        &none       &none         &kp F1        &kp F2  &kp F3  &kp F10  &none
+                                &none         &kp MINUS     &trans      &trans        &kp LEFT_ALT  &none
             >;
 
             label = "Fun";
         };
 
         Nav {
+            label = "Nav";
             bindings = <
-       &none     &none     &none         &none      &none     &none  &none             &none               &none               &none
-       &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none     &none  &kp LEFT_CONTROL  &kp LC(LEFT_SHIFT)  &kp LC(LEFT_SHIFT)  &kp LC(LEFT_SHIFT)
-&none  &none     &none     &none         &none      &none     &none  &none             &none               &none               &none               &none
-                           &trans        &kp UNDER  &trans    &none  &trans            &none
+       &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp PRINTSCREEN   &kp C_NEXT            &none               &none  &none     &none           &none         &none
+       &kp LC(Y)         &kp LC(Z)          &kp LC(C)         &kp LC(V)             &kp LC(Y)           &none  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&none  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp LC(X)         &kp C_VOLUME_UP       &none               &none  &none     &none           &none         &none            &none
+                                            &kp LEFT_CONTROL  &kp LS(LEFT_CONTROL)  &kp LEFT_CONTROL    &none  &trans    &none
             >;
         };
 
         Sai {
             bindings = <
-        &trans        &trans         &trans         &trans          &trans            &trans  &trans  &trans  &trans  &trans
-        &kp LEFT_ALT  &kp LA(SPACE)  &kp LC(SPACE)  &kp LEFT_SHIFT  &kp LEFT_SHIFT    &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans         &trans         &trans          &trans            &trans  &trans  &trans  &trans  &trans  &to 0
-                                     &trans         &trans          &kp SPACE         &trans  &to 6   &trans
+       &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LC(Y)    &none  &none  &none  &none  &none
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none        &none  &none  &none  &none  &none
+&none  &none         &none         &none             &none           &none        &none  &none  &none  &none  &none  &to 0
+                                   &kp DELETE        &kp SPACE       &mo 1        &none  &to 7  &none
             >;
         };
 
-        layer_6 {
+        Gamink {
             bindings = <
          &kp TAB       &kp Q  &kp NUMBER_3  &kp E      &kp R               &none  &none     &none     &none      &none
          &kp LSHFT     &kp A  &kp W         &kp D      &kp F               &none  &kp LEFT  &kp UP    &kp RIGHT  &none
