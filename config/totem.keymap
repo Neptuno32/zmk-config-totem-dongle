@@ -100,7 +100,16 @@
          &kp TAB       &kp Q  &kp NUMBER_3  &kp E      &kp R               &none  &none     &none     &none      &none
          &kp LSHFT     &kp A  &kp W         &kp D      &kp F               &none  &kp LEFT  &kp UP    &kp RIGHT  &none
 &kp ESC  &kp CAPSLOCK  &kp Z  &kp S         &kp C      &kp V               &none  &none     &kp DOWN  &none      &none  &to 0
-                              &kp X         &kp SPACE  &kp LEFT_CONTROL    &none  &mo 1     &none
+                              &kp X         &kp SPACE  &kp LEFT_CONTROL    &none  &mo 1     &to 6
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp LA(F4)  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &to 0
+                        &trans  &trans  &trans    &trans  &trans      &trans
             >;
         };
     };
