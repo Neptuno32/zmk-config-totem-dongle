@@ -58,10 +58,10 @@
 
         Num {
             bindings = <
-           &none      &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &none     &kp ASTERISK  &kp N7  &kp N8     &kp N9  &kp SLASH
-           &kp LC(Z)  &kp LC(X)          &kp LC(C)         &kp LC(V)        &none     &kp PLUS      &kp N4  &kp N5     &kp N6  &kp MINUS
-&kp LC(Y)  &none      &kp C_VOLUME_DOWN  &kp PRINTSCREEN   &kp C_VOLUME_UP  &none     &kp CARET     &kp N1  &kp N2     &kp N3  &none      &none
-                                         &none             &trans           &trans    &kp DOT       &kp N0  &kp EQUAL
+           &none      &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &none     &none      &kp N7  &kp N8   &kp N9  &kp MINUS
+           &kp LC(Z)  &kp LC(X)          &kp LC(C)         &kp LC(V)        &none     &none      &kp N4  &kp N5   &kp N6  &kp SLASH
+&kp LC(Y)  &none      &kp C_VOLUME_DOWN  &kp PRINTSCREEN   &kp C_VOLUME_UP  &none     &none      &kp N1  &kp N2   &kp N3  &none      &none
+                                         &none             &trans           &trans    &kp EQUAL  &kp N0  &kp DOT
             >;
 
             label = "Num";
@@ -69,19 +69,19 @@
 
         SymL {
             bindings = <
-       &kp EXCLAMATION  &kp AT_SIGN       &kp HASH        &kp DOLLAR       &none    &none  &none  &none  &none  &none
-       &kp LESS_THAN    &kp GREATER_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none    &none  &none  &none  &none  &none
-&none  &none            &kp TILDE         &kp PERCENT     &none            &none    &none  &none  &none  &none  &none  &none
-                                          &none           &none            &none    &none  &none  &none
+       &kp EXCLAMATION  &kp AT_SIGN    &kp HASH        &kp DOLLAR        &none    &none  &none      &none      &none     &none
+       &kp BACKSLASH    &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE   &none    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &none            &kp TILDE      &kp PERCENT     &none             &none    &none  &none      &none      &none     &none     &none
+                                       &none           &kp GREATER_THAN  &none    &none  &none      &none
             >;
         };
 
         SymR {
             bindings = <
-       &none      &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &none        &none  &kp AMPERSAND         &kp DOUBLE_QUOTES  &kp QUESTION           &kp BACKSLASH
-       &kp LC(Z)  &kp LC(X)          &kp LC(C)         &kp LC(V)        &kp LC(Y)    &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp UNDER
-&none  &none      &kp C_VOLUME_DOWN  &kp PRINTSCREEN   &kp C_VOLUME_UP  &none        &none  &none                 &kp SEMICOLON      &kp COLON              &none          &none
-                                     &none             &none            &none        &none  &kp LEFT_PARENTHESIS  &none
+       &none     &none     &none      &none      &none    &none     &kp AMPERSAND         &kp ASTERISK       &kp QUESTION           &kp UNDER
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none     &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES
+&none  &none     &none     &none      &none      &none    &none     &kp CARET             &kp SEMICOLON      &kp COLON              &none              &none
+                           &none      &none      &none    &kp PLUS  &kp LEFT_PARENTHESIS  &none
             >;
         };
 
