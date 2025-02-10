@@ -73,7 +73,7 @@
         tog_cl: tog_cl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &to 1>;
+            bindings = <&kp CAPSLOCK &tog 1>;
             label = "TOG_CL";
         };
     };
