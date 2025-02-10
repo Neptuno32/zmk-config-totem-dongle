@@ -12,6 +12,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define Base        0
 #define Media       1
@@ -53,9 +54,31 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 25 32 33 20 34>;
         };
+
+        htzoom: hold_tap_zoom {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HOLD_TAP_ZOOM";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(SPACE))>, <&rzoom>;
+
+            tapping-term-ms = <175>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
+
+    macros {
+        rzoom: rzoom {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(LA(SPACE)) &mkp MB1>,
+                <&macro_release>;
+
+            label = "RZOOM";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -119,10 +142,10 @@
 
         SAI {
             bindings = <
-            &trans   &trans    &trans             &trans         &trans    &trans  &trans  &trans  &trans  &trans
-            &kp TAB  &kp LALT  &kp LCTRL          &kp LSHFT      &trans    &trans  &trans  &trans  &trans  &trans
-&kp DELETE  &trans   &trans    &trans             &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                               &kp LA(LC(SPACE))  &kp LA(SPACE)  &mo 1     &trans  &trans  &trans
+            &trans   &trans    &trans         &trans     &trans     &trans  &trans  &trans  &trans  &trans
+            &kp TAB  &kp LALT  &kp LCTRL      &kp LSHFT  &trans     &trans  &trans  &trans  &trans  &trans
+&kp DELETE  &trans   &trans    &trans         &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                               &kp LA(SPACE)  &kp SPACE  &htzoom    &trans  &trans  &trans
             >;
         };
     };
