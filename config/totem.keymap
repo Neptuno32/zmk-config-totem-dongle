@@ -171,7 +171,7 @@
 
         NavDual {
             bindings = <
-        &none     &none     &none         &none      &none    &none  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+        &none     &kp F5    &kp LA(F4)    &none      &none    &none  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END
         &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &tog 7  &none     &none     &none         &none      &none    &none  &none           &none           &none         &none            &tog 7
                             &none         &none      &none    &none  &none           &none
