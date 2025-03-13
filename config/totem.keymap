@@ -162,10 +162,10 @@
 
         SAI {
             bindings = <
-            &trans  &trans            &trans             &trans         &trans           &trans  &trans  &trans  &trans  &trans
-            &trans  &kp LC(LEFT_ALT)  &kp LC(LA(SPACE))  &kp LA(SPACE)  &kp LC(SPACE)    &trans  &trans  &trans  &trans  &trans
-&kp DELETE  &trans  &trans            &trans             &trans         &trans           &trans  &trans  &trans  &trans  &trans  &tog 6
-                                      &kp J              &kp SPACE      &kp K            &trans  &trans  &trans
+            &trans  &trans            &trans         &trans         &trans           &trans  &trans  &trans  &trans  &trans
+            &trans  &kp LC(LEFT_ALT)  &kp LA(SPACE)  &kp LC(SPACE)  &none            &trans  &trans  &trans  &trans  &trans
+&kp DELETE  &trans  &trans            &trans         &trans         &trans           &trans  &trans  &trans  &trans  &trans  &tog 6
+                                      &kp LA(SPACE)  &kp SPACE      &kp LC(SPACE)    &trans  &trans  &trans
             >;
         };
     };
