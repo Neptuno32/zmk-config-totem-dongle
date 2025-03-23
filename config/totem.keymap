@@ -24,6 +24,8 @@
 #define Game        8
 #define Gameplus    9
 
+&sk { quick-release; };
+
 / {
     behaviors {
         hml: homerow_mods_left {
@@ -60,7 +62,7 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&TogShiftCaps>;
 
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
         };
     };
 
