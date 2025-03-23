@@ -90,10 +90,10 @@
 
         ShiftCaps {
             bindings = <
-            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&ShiftCaps  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans  &trans
+               &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+               &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&TogShiftCaps  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
