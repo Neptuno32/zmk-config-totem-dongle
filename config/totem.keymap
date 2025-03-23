@@ -107,10 +107,10 @@
         Base {
             label = "Base";
             bindings = <
-            &kp Q            &kp W            &kp E                &kp R               &kp T        &kp Y         &kp U               &kp I                &kp O              &kp P
-            &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hmls LEFT_SHIFT F  &kp G        &kp H         &hmrs LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &hmr LEFT_GUI SINGLE_QUOTE
-&ShiftCaps  &kp Z            &kp X            &kp C                &kp V               &kp B        &kp N         &kp M               &kp COMMA            &kp DOT            &kp MINUS                   &tog 6
-                                              &lt 5 ESCAPE         &lt 1 SPACE         &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE     &lt 5 DELETE
+        &kp Q            &kp W            &kp E                &kp R              &kp T        &kp Y         &kp U              &kp I                &kp O              &kp P
+        &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G        &kp H         &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &hmr LEFT_GUI SINGLE_QUOTE
+&tog 6  &kp Z            &kp X            &kp C                &kp V              &kp B        &kp N         &kp M              &kp COMMA            &kp DOT            &kp MINUS                   &ShiftCaps
+                                          &lt 5 ESCAPE         &lt 1 SPACE        &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE    &lt 5 DELETE
             >;
         };
 
@@ -163,10 +163,10 @@
 
         SAI {
             bindings = <
-            &trans  &trans        &trans         &trans         &trans              &trans  &trans  &trans  &trans  &trans
-            &trans  &kp LEFT_ALT  &kp LC(SPACE)  &kp LA(SPACE)  &kp LC(LEFT_ALT)    &trans  &trans  &trans  &trans  &trans
-&kp DELETE  &trans  &trans        &trans         &trans         &trans              &trans  &trans  &trans  &trans  &trans  &tog 6
-                                  &kp J          &kp SPACE      &kp K               &trans  &trans  &trans
+        &trans  &trans        &trans         &trans         &trans              &trans  &trans  &trans  &trans  &trans
+        &trans  &kp LEFT_ALT  &kp LC(SPACE)  &kp LA(SPACE)  &kp LC(LEFT_ALT)    &trans  &trans  &trans  &trans  &trans
+&tog 6  &trans  &trans        &trans         &trans         &trans              &trans  &trans  &trans  &trans  &trans  &none
+                              &kp J          &kp SPACE      &kp K               &trans  &trans  &trans
             >;
         };
     };
