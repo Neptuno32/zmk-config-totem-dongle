@@ -6,11 +6,11 @@
 #
 ---
 include:
+#  - board: seeeduino_xiao_ble
+#    shield: totem_left rgbled_adapter
+#  - board: seeeduino_xiao_ble
+#    shield: totem_right rgbled_adapter
   - board: seeeduino_xiao_ble
-    shield: totem_left rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: totem_right rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: totem_dongle rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+    shield: totem_dongle
+#  - board: seeeduino_xiao_ble
+#    shield: settings_reset
