@@ -123,10 +123,10 @@
         Base {
             label = "Base";
             bindings = <
-            &kp Q            &kp W            &kp E                  &kp R                &kp T          &kp Y         &kp U                &kp I                  &kp O              &kp P
-            &hml LEFT_GUI A  &hml LEFT_ALT S  &hmlsc LEFT_CONTROL D  &hmlsc LEFT_SHIFT F  &kp G          &kp H         &hmrsc LEFT_SHIFT J  &hmrsc LEFT_CONTROL K  &hmr LEFT_SHIFT L  &hmr LEFT_GUI SINGLE_QUOTE
-&caps_word  &kp Z            &kp X            &kp C                  &kp V                &kp B          &kp N         &kp M                &kp COMMA              &kp DOT            &kp MINUS                   &sk LEFT_SHIFT
-                                              &lt 6 ESCAPE           &lt 1 TAB            &lt 3 SPACE    &lt 2 RETURN  &lt 4 BACKSPACE      &lt 6 DELETE
+            &kp Q            &kp W            &kp E                  &kp R                &kp T        &kp Y         &kp U                &kp I                  &kp O              &kp P
+            &hml LEFT_GUI A  &hml LEFT_ALT S  &hmlsc LEFT_CONTROL D  &hmlsc LEFT_SHIFT F  &kp G        &kp H         &hmrsc LEFT_SHIFT J  &hmrsc LEFT_CONTROL K  &hmr LEFT_SHIFT L  &hmr LEFT_GUI SINGLE_QUOTE
+&caps_word  &kp Z            &kp X            &kp C                  &kp V                &kp B        &kp N         &kp M                &kp COMMA              &kp DOT            &kp MINUS                   &sk LEFT_SHIFT
+                                              &lt 6 ESCAPE           &lt 1 SPACE          &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE      &lt 6 DELETE
             >;
         };
 
