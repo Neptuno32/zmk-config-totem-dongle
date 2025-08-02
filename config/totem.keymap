@@ -31,6 +31,13 @@
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE>; };
 
+&mt {
+    hold-while-undecided;
+    tapping-term-ms = <170>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <100>;
+};
+
 / {
     behaviors {
         hml: homerow_mods_left {
@@ -203,10 +210,10 @@
 
         SAI {
             bindings = <
-        &trans  &trans         &trans         &trans     &trans              &trans  &trans  &trans  &trans  &trans
-        &trans  &kp LA(SPACE)  &kp LC(SPACE)  &trans     &trans              &trans  &trans  &trans  &trans  &trans
-&tog 7  &trans  &trans         &trans         &trans     &trans              &trans  &trans  &trans  &trans  &trans  &none
-                               &trans         &spacenum  &kp LEFT_CONTROL    &trans  &trans  &trans
+        &trans  &trans          &trans              &trans            &trans           &trans  &trans  &trans  &trans  &trans
+        &trans  &kp S           &kp D               &kp F             &trans           &trans  &trans  &trans  &trans  &trans
+&tog 7  &trans  &mt LEFT_ALT X  &mt LEFT_CONTROL C  &mt LEFT_SHIFT V  &trans           &trans  &trans  &trans  &trans  &trans  &none
+                                &trans              &spacenum         &kp LC(SPACE)    &trans  &trans  &trans
             >;
         };
 
