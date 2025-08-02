@@ -70,9 +70,9 @@
             tapping-term-ms = <200>;
         };
 
-        hmlsc: hmlsc {
+        hml_und: hml_und {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMLSC";
+            label = "HML_UND";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
@@ -85,9 +85,9 @@
             hold-while-undecided;
         };
 
-        hmrsc: hmrsc {
+        hmr_und: hmr_und {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMRSC";
+            label = "HMR_UND";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
@@ -117,16 +117,30 @@
         };
     };
 
+    macros {
+        spacenum: spacenum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp SPACE &mo 1>,
+                <&macro_release>,
+                <&kp SPACE &mo 1>;
+
+            label = "SPACENUM";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Base {
             label = "Base";
             bindings = <
-            &kp Q            &kp W            &kp E                  &kp R                &kp T        &kp Y         &kp U                &kp I                  &kp O              &kp P
-            &hml LEFT_GUI A  &hml LEFT_ALT S  &hmlsc LEFT_CONTROL D  &hmlsc LEFT_SHIFT F  &kp G        &kp H         &hmrsc LEFT_SHIFT J  &hmrsc LEFT_CONTROL K  &hmr LEFT_SHIFT L  &hmr LEFT_GUI SINGLE_QUOTE
-&caps_word  &kp Z            &kp X            &kp C                  &kp V                &kp B        &kp N         &kp M                &kp COMMA              &kp DOT            &kp MINUS                   &sk LEFT_SHIFT
-                                              &lt 6 ESCAPE           &lt 1 SPACE          &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE      &lt 6 DELETE
+            &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U                  &kp I                    &kp O              &kp P
+            &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr_und LEFT_SHIFT J  &hmr_und LEFT_CONTROL K  &hmr LEFT_SHIFT L  &hmr LEFT_GUI SINGLE_QUOTE
+&caps_word  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M                  &kp COMMA                &kp DOT            &kp MINUS                   &sk LEFT_SHIFT
+                                              &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE        &lt 6 DELETE
             >;
         };
 
@@ -188,10 +202,10 @@
 
         SAI {
             bindings = <
-        &trans  &trans         &trans         &trans     &trans    &trans  &trans          &trans  &trans  &trans
-        &trans  &kp LC(SPACE)  &kp LA(SPACE)  &kp SPACE  &trans    &trans  &trans          &trans  &trans  &trans
-&tog 7  &trans  &trans         &trans         &trans     &trans    &trans  &trans          &trans  &trans  &trans  &none
-                               &trans         &trans     &trans    &trans  &studio_unlock  &trans
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+&tog 7  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &none
+                        &trans  &spacenum  &trans    &trans  &trans  &trans
             >;
         };
 
