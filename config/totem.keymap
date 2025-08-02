@@ -117,18 +117,6 @@
         };
     };
 
-    macros {
-        spacenum: spacenum {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp SPACE &mo 1>,
-                <&macro_release &kp SPACE &mo 1>;
-
-            label = "SPACENUM";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
