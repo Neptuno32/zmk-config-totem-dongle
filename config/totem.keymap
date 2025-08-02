@@ -122,8 +122,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                = <&macro_press &mo 1 &kp SPACE>
-                , <&macro_release &mo 1 &kp SPACE>
+                = <&macro_press &mo 1>
+                , <&macro_release &mo 1>
                 ;
 
             label = "SPACENUM";
