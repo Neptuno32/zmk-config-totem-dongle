@@ -91,21 +91,6 @@
             hold-trigger-key-positions = <5 15 26 27 16 6 7 17 28 8 18 29 9 19 30 31 35 36 37 32 33 34>;
             hold-while-undecided;
         };
-
-        hmr_und: hmr_und {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR_UND";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            bindings = <&kp>, <&kp>;
-
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 25 32 33 20 34 35 36 37>;
-            hold-while-undecided;
-        };
     };
 
     combos {
@@ -145,10 +130,10 @@
         Base {
             label = "Base";
             bindings = <
-            &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U                  &kp I                    &kp O              &kp P
-            &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr_und LEFT_SHIFT J  &hmr_und LEFT_CONTROL K  &hmr LEFT_SHIFT L  &hmr LEFT_GUI SINGLE_QUOTE
-&caps_word  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M                  &kp COMMA                &kp DOT            &kp MINUS                   &sk LEFT_SHIFT
-                                              &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE        &lt 6 DELETE
+            &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U              &kp I                &kp O            &kp P
+            &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
+&caps_word  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M              &kp COMMA            &kp DOT          &kp MINUS                   &sk LEFT_SHIFT
+                                              &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE    &lt 6 DELETE
             >;
         };
 
