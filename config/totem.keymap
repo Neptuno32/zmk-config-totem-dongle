@@ -107,6 +107,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        sailayer: sailayer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SAILAYER";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&to 7>;
+
+            tapping-term-ms = <240>;
+        };
     };
 
     combos {
@@ -158,10 +167,10 @@
         Base {
             label = "Base";
             bindings = <
-        &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U              &kp I                &kp O            &kp P
-        &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
-&tog 7  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M              &com_semi            &per_col         &kp MINUS                   &ShiftCaps
-                                          &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE    &lt 6 DELETE
+           &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U              &kp I                &kp O            &kp P
+           &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
+&sailayer  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M              &com_semi            &per_col         &kp MINUS                   &ShiftCaps
+                                             &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE    &lt 6 DELETE
             >;
         };
 
