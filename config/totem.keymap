@@ -121,12 +121,6 @@
     combos {
         compatible = "zmk,combos";
 
-        togsai {
-            bindings = <&tog 7>;
-            key-positions = <33 20>;
-            layers = <0>;
-        };
-
         towasd {
             bindings = <&to 8>;
             key-positions = <31 36>;
@@ -169,7 +163,7 @@
             bindings = <
            &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U              &kp I                &kp O            &kp P
            &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
-&sailayer  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M              &com_semi            &per_col         &kp MINUS                   &ShiftCaps
+&sailayer  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M              &kp COMMA            &kp PERIOD       &kp MINUS                   &ShiftCaps
                                              &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE    &lt 6 DELETE
             >;
         };
@@ -198,17 +192,17 @@
             bindings = <
        &none     &none         &none      &none      &none    &kp RA(LC(SLASH))  &kp AMPERSAND         &kp PERCENT            &kp RIGHT_BRACKET  &kp QUESTION
        &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none    &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE     &kp RIGHT_BRACE
-&none  &none     &none         &none      &none      &none    &kp RA(N)          &none                 &kp SEMICOLON          &kp COLON          &none            &none
+&none  &none     &none         &none      &none      &none    &kp RA(N)          &none                 &kp SEMICOLON          &kp COLON          &kp UNDER        &none
                                &none      &none      &none    &none              &none                 &none
             >;
         };
 
         Nav {
             bindings = <
-       &none     &none     &none      &none      &none    &kp INSERT  &kp HOME           &kp PAGE_DOWN     &kp PAGE_UP      &kp END
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 5      &kp LEFT_ARROW     &kp DOWN          &kp UP_ARROW     &kp RIGHT_ARROW
-&none  &none     &none     &none      &none      &none    &none       &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &none            &none
-                           &none      &none      &none    &none       &none              &none
+       &none     &none     &none      &none      &none    &kp INSERT  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP       &kp END
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 5      &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW      &kp RIGHT_ARROW
+&none  &none     &none     &none      &none      &none    &none       &kp LESS_THAN   &none          &kp GREATER_THAN  &none            &none
+                           &none      &none      &none    &none       &none           &none
             >;
         };
 
