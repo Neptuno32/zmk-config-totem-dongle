@@ -21,7 +21,10 @@
 #define Fun         5
 #define SAI         6
 
-&sk { quick-release; };
+&sk {
+    quick-release;
+    lazy;
+};
 
 &lt {
     quick-tap-ms = <175>;
@@ -35,6 +38,8 @@
     flavor = "tap-preferred";
     quick-tap-ms = <100>;
 };
+
+&sl { lazy; };
 
 / {
     behaviors {
@@ -70,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFTCAPS";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&caps_layer>;
+            bindings = <&sl 9>, <&caps_layer>;
 
             tapping-term-ms = <240>;
         };
@@ -112,7 +117,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SAILAYER";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&to 7>;
+            bindings = <&to 0>, <&to 6>;
 
             tapping-term-ms = <240>;
         };
@@ -122,7 +127,7 @@
         compatible = "zmk,combos";
 
         towasd {
-            bindings = <&to 8>;
+            bindings = <&to 9>;
             key-positions = <31 36>;
             layers = <0>;
         };
@@ -147,9 +152,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&tog 9 &kp CAPSLOCK>,
+                <&tog 10 &kp CAPSLOCK>,
                 <&macro_release>,
-                <&tog 9 &kp CAPSLOCK>;
+                <&tog 10 &kp CAPSLOCK>;
 
             label = "CAPS_LAYER";
         };
@@ -164,7 +169,7 @@
            &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U              &kp I                &kp O            &kp P
            &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
 &sailayer  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M              &kp COMMA            &kp PERIOD       &kp MINUS                   &ShiftCaps
-                                             &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE    &lt 6 DELETE
+                                             &lt 5 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &lt 4 BACKSPACE    &lt 5 DELETE
             >;
         };
 
@@ -172,7 +177,7 @@
             bindings = <
        &kp HOME        &kp PRINTSCREEN    &kp C_MUTE        &kp END          &none         &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
        &kp LC(Z)       &kp LC(X)          &kp LC(C)         &kp LC(V)        &kp LC(Y)     &kp PLUS      &kp N4  &kp N5  &kp N6  &kp DOT
-&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &none
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &ShiftCaps
                                           &none             &none            &none         &kp EQUAL     &kp N0  &none
             >;
 
@@ -186,6 +191,8 @@
 &none  &none            &kp TILDE      &kp GRAVE      &none             &none               &none  &none      &none      &none         &none     &none
                                        &none          &none             &none               &none  &none      &none
             >;
+
+            label = "SymL";
         };
 
         SymR {
@@ -195,24 +202,19 @@
 &none  &none     &none         &none      &none      &none    &kp RA(N)          &none                 &kp SEMICOLON          &kp COLON          &kp UNDER        &none
                                &none      &none      &none    &none              &none                 &none
             >;
+
+            label = "SymR";
         };
 
         Nav {
             bindings = <
        &none     &none     &none      &none      &none    &kp INSERT  &kp HOME           &kp PAGE_DOWN     &kp PAGE_UP      &kp END
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 5      &kp LEFT_ARROW     &kp DOWN          &kp UP_ARROW     &kp RIGHT_ARROW
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 8      &kp LEFT_ARROW     &kp DOWN          &kp UP_ARROW     &kp RIGHT_ARROW
 &none  &none     &none     &none      &none      &none    &none       &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &none            &none
                            &none      &none      &none    &none       &none              &none
             >;
-        };
 
-        NavLock {
-            bindings = <
-       &none     &none     &none      &none      &none    &kp INS  &kp HOME           &kp PAGE_DOWN     &kp PAGE_UP      &kp END
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 5   &kp LEFT_ARROW     &kp DOWN_ARROW    &kp UP_ARROW     &kp RIGHT_ARROW
-&none  &none     &none     &none      &none      &none    &none    &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &none            &tog 5
-                           &none      &none      &none    &none    &none              &none
-            >;
+            label = "Nav";
         };
 
         Fun {
@@ -222,15 +224,30 @@
 &none  &none     &none     &none      &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
                            &none      &none      &none    &none  &none   &none
             >;
+
+            label = "Fun";
         };
 
         SAI {
             bindings = <
         &trans  &trans          &trans              &trans            &trans           &trans  &trans          &trans  &trans  &trans
         &trans  &kp S           &kp D               &kp F             &trans           &trans  &trans          &trans  &trans  &trans
-&tog 7  &trans  &mt LEFT_ALT X  &mt LEFT_CONTROL C  &mt LEFT_SHIFT V  &trans           &trans  &trans          &trans  &trans  &trans  &none
+&tog 6  &trans  &mt LEFT_ALT X  &mt LEFT_CONTROL C  &mt LEFT_SHIFT V  &trans           &trans  &trans          &trans  &trans  &trans  &none
                                 &trans              &spacenum         &kp LC(SPACE)    &trans  &studio_unlock  &trans
             >;
+
+            label = "SAI";
+        };
+
+        NavLock {
+            bindings = <
+       &none     &none     &none      &none      &none    &kp INS  &kp HOME           &kp PAGE_DOWN     &kp PAGE_UP      &kp END
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 8   &kp LEFT_ARROW     &kp DOWN_ARROW    &kp UP_ARROW     &kp RIGHT_ARROW
+&none  &none     &none     &none      &none      &none    &none    &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &none            &tog 8
+                           &none      &none      &none    &none    &none              &none
+            >;
+
+            label = "NavLock";
         };
 
         wasd {
@@ -239,6 +256,18 @@
          &kp LSHFT  &kp A  &kp W  &kp D      &kp F        &none   &kp LEFT  &kp UP_ARROW  &kp RIGHT  &none
 &kp ESC  &kp CAPS   &kp Z  &kp S  &kp C      &kp V        &none   &none     &kp DOWN      &none      &none   &to 0
                            &kp X  &kp SPACE  &kp LCTRL    &none   &none     &none
+            >;
+
+            label = "wasd";
+        };
+
+        Shift {
+            label = "Shift";
+            bindings = <
+       &kp LS(Q)            &kp LS(W)            &kp LS(E)                    &kp LS(R)                  &kp LS(T)    &kp LS(Y)  &kp LS(U)              &kp LS(I)                &kp LS(O)            &kp LS(P)
+       &hml LEFT_GUI LS(A)  &hml LEFT_ALT LS(S)  &hml_und LEFT_CONTROL LS(D)  &hml_und LEFT_SHIFT LS(F)  &kp LS(G)    &kp LS(H)  &hmr LEFT_SHIFT LS(J)  &hmr LEFT_CONTROL LS(K)  &hmr LEFT_ALT LS(L)  &hmr LEFT_GUI LS(SINGLE_QUOTE)
+&none  &kp LS(Z)            &kp LS(X)            &kp LS(C)                    &kp LS(V)                  &kp LS(B)    &kp LS(N)  &kp LS(M)              &kp LS(COMMA)            &kp LS(PERIOD)       &kp LS(MINUS)                   &none
+                                                 &kp ESCAPE                   &kp SPACE                  &kp TAB      &kp ENTER  &kp BACKSPACE          &kp LC(DELETE)
             >;
         };
 
@@ -249,7 +278,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &caps_layer
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "Caps";
         };
     };
 };
-
