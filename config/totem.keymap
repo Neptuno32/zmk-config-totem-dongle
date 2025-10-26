@@ -188,7 +188,7 @@
         SymR {
             bindings = <
        &none     &none         &none      &none      &none    &kp BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RA(LC(SLASH))
-       &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none    &kp PIPE       &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp RIGHT_BRACE  &kp QUESTION
+       &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none    &kp PIPE       &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp QUESTION
 &none  &none     &none         &none      &none      &none    &kp RA(N)      &none                  &kp SEMICOLON      &kp COLON        &kp UNDER          &none
                                &none      &none      &none    &none          &none                  &none
             >;
@@ -242,9 +242,9 @@
 
         wasd {
             bindings = <
-         &kp TAB    &kp Q  &none  &kp E      &kp R        &kp N1  &kp N2    &kp N3        &kp N4     &kp N5
-         &kp LSHFT  &kp A  &kp W  &kp D      &kp F        &none   &kp LEFT  &kp UP_ARROW  &kp RIGHT  &none
-&kp ESC  &kp CAPS   &kp Z  &kp S  &kp C      &kp V        &none   &none     &kp DOWN      &none      &none   &tog 8
+        &kp TAB     &kp Q  &none  &kp E      &kp R        &kp N1  &kp N2    &kp N3        &kp N4     &kp N5
+        &kp LSHFT   &kp A  &kp W  &kp D      &kp F        &none   &kp LEFT  &kp UP_ARROW  &kp RIGHT  &none
+&tog 8  &kp ESCAPE  &kp Z  &kp S  &kp C      &kp V        &none   &none     &kp DOWN      &none      &none   &tog 8
                            &kp X  &kp SPACE  &kp LCTRL    &none   &none     &none
             >;
 
