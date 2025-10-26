@@ -39,9 +39,11 @@
     quick-tap-ms = <100>;
 };
 
-&sl { lazy; };
+ignore-modifiers {
+    ;};
 
-/ {
+/
+
     behaviors {
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
