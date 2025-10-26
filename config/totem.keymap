@@ -244,7 +244,7 @@
             bindings = <
         &kp TAB     &kp Q  &none  &kp E      &kp R        &kp N1  &kp N2    &kp N3        &kp N4     &kp N5
         &kp LSHFT   &kp A  &kp W  &kp D      &kp F        &none   &kp LEFT  &kp UP_ARROW  &kp RIGHT  &none
-&tog 8  &kp ESCAPE  &kp Z  &kp S  &kp C      &kp V        &none   &none     &kp DOWN      &none      &none   &tog 8
+&tog 8  &kp ESCAPE  &kp Z  &kp S  &kp C      &kp V        &none   &none     &kp DOWN      &none      &none   &none
                            &kp X  &kp SPACE  &kp LCTRL    &none   &none     &none
             >;
 
