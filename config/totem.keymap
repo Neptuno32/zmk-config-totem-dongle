@@ -93,24 +93,6 @@
             hold-while-undecided;
         };
 
-        com_semi: com_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COM_SEMI";
-            bindings = <&kp COMMA>, <&kp SEMICOLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        per_col: per_col {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PER_COL";
-            bindings = <&kp PERIOD>, <&kp COLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         slayer: slayer {
             compatible = "zmk,behavior-tap-dance";
             label = "SLAYER";
