@@ -103,7 +103,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        sticky_shift {
+            bindings = <&sk LEFT_SHIFT>;
+            key-positions = <31 36>;
+        };
+    };
 
     macros {
         spacenum: spacenum {
