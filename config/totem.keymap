@@ -97,7 +97,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SLAYER";
             #binding-cells = <0>;
-            bindings = <&sk LC(LEFT_ALT)>, <&to 7>;
+            bindings = <&sk RIGHT_ALT>, <&to 7>;
 
             tapping-term-ms = <240>;
         };
