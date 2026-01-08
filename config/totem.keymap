@@ -49,7 +49,6 @@
                 trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
                 bindings = <&key_repeat>;
                 max-prior-idle-ms = <350>;
-                strict-modifiers;
             };
         };
         hml: homerow_mods_left {
