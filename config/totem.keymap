@@ -187,6 +187,13 @@
 
             label = "CAPS_LAYER";
         };
+
+        enye: enye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE &kp RA(N)>;
+            label = "ENYE";
+        };
     };
 
     keymap {
