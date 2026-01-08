@@ -59,7 +59,7 @@
             akt_quoten {
                 trigger-keys = <SINGLE_QUOTE>;
                 max-prior-idle-ms = <350>;
-                bindings = <&kp RIGHT_ALT &kp N>;
+                bindings = <&kp T>;
             };
 
             label = "AK_N";
