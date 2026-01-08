@@ -183,7 +183,7 @@
             bindings = <
            &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y         &kp U              &kp I                &kp O            &kp P
            &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H         &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
-&sailayer  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &ak_n         &kp M              &kp COMMA            &kp PERIOD       &kp MINUS                   &none
+&sailayer  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N         &kp M              &kp COMMA            &kp PERIOD       &kp MINUS                   &none
                                              &lt 6 ESCAPE             &lt 1 SPACE            &lt 3 TAB    &lt 2 RETURN  &magic_shift 4 0   &lt 6 DELETE
             >;
         };
