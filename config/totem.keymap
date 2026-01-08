@@ -21,10 +21,7 @@
 #define Fun         5
 #define SAI         6
 
-&sk {
-    quick-release;
-    lazy;
-};
+&sk { quick-release; };
 
 &lt {
     quick-tap-ms = <100>;
