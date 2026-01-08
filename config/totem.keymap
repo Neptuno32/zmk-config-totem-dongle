@@ -148,12 +148,12 @@
 
         combo_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <11 10>;
+            key-positions = <0 1>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
-            key-positions = <13 12>;
+            key-positions = <2 3>;
         };
     };
 
