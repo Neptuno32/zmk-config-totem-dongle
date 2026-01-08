@@ -51,6 +51,15 @@
             label = "SHIFT_REPEAT";
         };
 
+        ak_n: ak_n {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp n>;
+
+            akt_quoten { trigger-keys = <SINGLE_QUOTE>; max-prior-idle-ms = <350>; bindings = <&kp RIGHT_ALT &kp N>; };
+            label = "AK_N";
+        };
+
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
