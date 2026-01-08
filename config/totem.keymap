@@ -191,9 +191,7 @@
         enye: enye {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_pause_for_release>,
-                <&macro_release>,
+            wait-ms = <40>;
                 <&kp BACKSPACE &kp RA(N)>;
 
             label = "ENYE";
