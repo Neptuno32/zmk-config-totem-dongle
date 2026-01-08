@@ -40,7 +40,7 @@
 
 / {
     behaviors {
-        shift-repeat: shift-repeat {
+        ShiftRepeat: ShiftRepeat {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>;
