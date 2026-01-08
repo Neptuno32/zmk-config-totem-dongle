@@ -141,9 +141,19 @@
             key-positions = <16 17>;
         };
 
-        combo_del {
+        combo_del_r {
             bindings = <&kp DELETE>;
             key-positions = <18 19>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <11 10>;
+        };
+
+        combo_del_l {
+            bindings = <&kp DELETE>;
+            key-positions = <13 12>;
         };
     };
 
