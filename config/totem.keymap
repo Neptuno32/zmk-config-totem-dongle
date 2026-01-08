@@ -54,7 +54,7 @@
         ak_n: ak_n {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp n>;
+            bindings = <&kp N>;
 
             akt_quoten { trigger-keys = <SINGLE_QUOTE>; max-prior-idle-ms = <350>; bindings = <&kp RIGHT_ALT &kp N>; };
             label = "AK_N";
