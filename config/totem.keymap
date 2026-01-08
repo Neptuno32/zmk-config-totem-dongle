@@ -118,7 +118,7 @@
         molayer_mshift: molayer_mshift {
             compatible = "zmk,behavior-hold-tap";
             label = "MOLAYER_MSHIFT";
-            bindings = <&mo>, <&ShiftCaps>;
+            bindings = <&mo>, <&shift_caps>;
 
             #binding-cells = <2>;
             flavor = "balanced";
