@@ -59,7 +59,7 @@
             akt_quoten {
                 trigger-keys = <SINGLE_QUOTE>;
                 max-prior-idle-ms = <350>;
-                bindings = <&kp T>;
+                bindings = <&enye>;
             };
 
             label = "AK_N";
@@ -163,7 +163,7 @@
     };
 
     macros {
-        space_num: spacenum {
+        space_num: space_num {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -173,7 +173,7 @@
                 <&macro_release>,
                 <&mo 1 &kp SPACE>;
 
-            label = "SPACENUM";
+            label = "SPACE_NUM";
         };
 
         caps_layer: caps_layer {
@@ -186,6 +186,15 @@
                 <&tog 8 &kp CAPSLOCK>;
 
             label = "CAPS_LAYER";
+        };
+
+        enye: enye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp BACKSPACE &kp RIGHT_ALT &kp N>,
+
+            label = "ENYE";
         };
     };
 
