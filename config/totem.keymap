@@ -129,22 +129,22 @@
 
         combo_back {
             bindings = <&kp BACKSPACE>;
-            key-positions = <28 27>;
+            key-positions = <16 17>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
-            key-positions = <29 30>;
+            key-positions = <18 19>;
         };
 
         combo_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <21 22>;
+            key-positions = <10 11>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
-            key-positions = <23 24>;
+            key-positions = <12 13>;
         };
     };
 
