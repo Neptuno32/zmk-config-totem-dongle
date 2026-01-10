@@ -51,6 +51,15 @@
             label = "SHIFT_REPEAT";
         };
 
+        ak_n: ak_n {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp n>;
+            dead-keys = <SINGLE_QUOTE>;
+
+            enye { trigger-keys = <SINGLE_QUOTE>; bindings = <&kp RA(N)>; };
+        };
+
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
