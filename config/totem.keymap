@@ -122,6 +122,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        capson_magic: capson_magic {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPSON_MAGIC";
+            bindings = <&mo>, <&caps_layer>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+        };
     };
 
     combos {
@@ -266,10 +277,10 @@
 
         Caps {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans  &trans  &caps_layer
-                        &trans  &trans  &trans    &trans  &caps_layer  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &capson_magic 4 0  &trans
             >;
 
             label = "Caps";
