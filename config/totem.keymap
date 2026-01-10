@@ -54,7 +54,7 @@
         ak_n: ak_n {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp n>;
+            bindings = <&kp N>;
             dead-keys = <SINGLE_QUOTE>;
 
             enye { trigger-keys = <SINGLE_QUOTE>; bindings = <&kp RA(N)>; };
