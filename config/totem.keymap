@@ -141,12 +141,12 @@
 
         combo_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <12 13>;
+            key-positions = <11 10>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
-            key-positions = <11 10>;
+            key-positions = <12 13>;
         };
 
         combo_num_mute {
