@@ -210,7 +210,7 @@
 
         Num {
             bindings = <
-       &kp HOME        &tog 7             &none            &kp END     &none         &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
+       &kp HOME        &tog 7             &tog 8           &kp END     &none         &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
        &kp LC(Z)       &kp LC(X)          &kp LC(C)        &kp LC(V)   &kp LC(Y)     &kp PLUS      &kp N4  &kp N5  &kp N6  &kp DOT
 &none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_MUTE    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &none
                                           &none            &none       &none         &kp EQUAL     &kp N0  &none
@@ -282,6 +282,17 @@
             >;
 
             label = "SAI";
+        };
+
+        WASD {
+            bindings = <
+        &kp ESC    &kp N1  &kp N2  &kp N3     &kp R        &trans  &trans  &trans  &trans  &trans
+        &kp TAB    &kp A   &kp W   &kp D      &kp E        &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp Z   &kp S   &kp C      &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &kp SPACE  &kp LCTRL    &trans  &tog 8  &trans
+            >;
+
+            label = "WASD";
         };
     };
 
