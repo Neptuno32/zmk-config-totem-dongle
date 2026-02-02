@@ -279,10 +279,10 @@
 
         SAI {
             bindings = <
-       &trans  &trans          &trans              &trans            &trans     &trans  &trans          &trans  &trans  &trans
-       &trans  &kp S           &kp D               &kp F             &trans     &trans  &trans          &trans  &trans  &trans
-&none  &trans  &mt LEFT_ALT X  &mt LEFT_CONTROL C  &mt LEFT_SHIFT V  &trans     &trans  &trans          &trans  &trans  &trans  &none
-                               &trans              &space_num        &kp TAB    &trans  &studio_unlock  &trans
+       &trans   &trans          &trans              &trans            &trans     &trans  &trans          &trans  &trans  &trans
+       &kp A    &kp S           &kp D               &kp F             &trans     &trans  &trans          &trans  &trans  &trans
+&none  &mt Z Z  &mt LEFT_ALT X  &mt LEFT_CONTROL C  &mt LEFT_SHIFT V  &trans     &trans  &trans          &trans  &trans  &trans  &none
+                                &trans              &space_num        &kp TAB    &trans  &studio_unlock  &trans
             >;
 
             label = "SAI";
