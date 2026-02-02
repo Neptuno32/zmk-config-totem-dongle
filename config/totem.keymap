@@ -132,13 +132,13 @@
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
-            layers = <0 1>;
+            layers = <0 1 7>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
             key-positions = <18 19>;
-            layers = <0>;
+            layers = <0 7>;
         };
 
         combo_esc {
