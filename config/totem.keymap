@@ -144,13 +144,13 @@
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <11 10>;
-            layers = <0>;
+            layers = <0 7>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0>;
+            layers = <0 7>;
         };
 
         combo_num_pscrn {
