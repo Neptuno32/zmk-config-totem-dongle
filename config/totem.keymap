@@ -35,7 +35,7 @@
     quick-tap-ms = <100>;
 };
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE MINUS>; };
+&caps_word { continue-list = <UNDERSCORE BACKSPACE SPACE MINUS>; };
 
 / {
     behaviors {
@@ -100,7 +100,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SAILAYER";
             #binding-cells = <0>;
-            bindings = <&sk RIGHT_ALT>, <&to 7>;
+            bindings = <&sk RIGHT_ALT>, <&to 6>;
 
             tapping-term-ms = <240>;
         };
@@ -124,6 +124,18 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mt_und: mt_und {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_UND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <170>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+        };
     };
 
     combos {
@@ -132,25 +144,25 @@
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
-            layers = <0 1 7>;
+            layers = <0 1 6>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
-            key-positions = <18 19>;
-            layers = <0 7>;
+            key-positions = <18 17>;
+            layers = <0 6>;
         };
 
         combo_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <11 10>;
-            layers = <0 7>;
+            key-positions = <11 12>;
+            layers = <0>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0 7>;
+            layers = <0 6>;
         };
 
         combo_num_pscrn {
@@ -159,8 +171,8 @@
             layers = <1>;
         };
 
-        combo_num_pause {
-            bindings = <&kp C_PAUSE>;
+        combo_num_mute {
+            bindings = <&kp C_MUTE>;
             key-positions = <23 22>;
             layers = <1>;
         };
@@ -168,19 +180,18 @@
         combo_nav_pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <18 17>;
-            layers = <4 5>;
+            layers = <4>;
         };
 
-        combo_nav_pause {
-            bindings = <&kp C_PAUSE>;
+        combo_nav_mute {
+            bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
-            layers = <4 5>;
+            layers = <4>;
         };
 
-        combo_sai_zoom {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <11 12>;
-            layers = <7>;
+        combo_sai_escLcLalt {
+            bindings = <&hml_und LC(LEFT_ALT) ESCAPE>;
+            key-positions = <12 11>;
         };
     };
 
@@ -214,10 +225,10 @@
 
         Num {
             bindings = <
-       &kp HOME        &tog 7             &tog 8           &kp END     &none         &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
-       &kp LC(Z)       &kp LC(X)          &kp LC(C)        &kp LC(V)   &kp LC(Y)     &kp PLUS      &kp N4  &kp N5  &kp N6  &kp DOT
-&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_MUTE    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &none
-                                          &none            &none       &none         &kp EQUAL     &kp N0  &none
+       &kp HOME        &tog 6             &tog 7           &kp END     &none          &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
+       &kp LC(Z)       &kp LC(X)          &kp LC(C)        &kp LC(V)   &kp LC(Y)      &kp PLUS      &kp N4  &kp N5  &kp N6  &kp DOT
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PAUSE    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &none
+                                          &none            &none       &none          &kp EQUAL     &kp N0  &none
             >;
 
             label = "Num";
@@ -236,8 +247,8 @@
 
         SymR {
             bindings = <
-       &none     &none         &none      &none      &none    &kp BACKSLASH  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RA(LC(SLASH))
-       &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none    &kp PIPE       &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp QUESTION
+       &none     &none         &none      &none      &none    &kp PIPE       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RA(LC(SLASH))
+       &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none    &kp BACKSLASH  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp QUESTION
 &none  &none     &none         &none      &none      &none    &kp RA(N)      &none              &kp SEMICOLON          &kp COLON        &kp UNDER          &none
                                &none      &none      &none    &none          &none              &none
             >;
@@ -247,23 +258,13 @@
 
         Nav {
             bindings = <
-       &none     &none     &none      &none      &none    &kp INSERT  &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &to 5       &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
-&none  &none     &none     &none      &none      &none    &kp C_MUTE  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &to 5
-                           &none      &trans     &none    &none       &none           &none
+       &none     &none     &none      &none      &none    &kp INSERT   &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 4       &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
+&none  &none     &none     &none      &none      &none    &kp C_PAUSE  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
+                           &none      &trans     &none    &none        &none           &none
             >;
 
             label = "Nav";
-        };
-
-        Nav_lock {
-            label = "Nav_lock";
-            bindings = <
-       &none     &none     &none      &none      &none    &kp INSERT  &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 5      &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
-&none  &none     &none     &none      &none      &none    &none       &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &tog 5
-                           &none      &none      &none    &none       &none           &none
-            >;
         };
 
         Fun {
@@ -279,10 +280,10 @@
 
         SAI {
             bindings = <
-       &trans  &trans          &trans              &trans            &trans     &trans  &trans          &trans  &trans  &trans
-       &kp A   &kp S           &kp D               &kp F             &trans     &trans  &trans          &trans  &trans  &trans
-&none  &trans  &mt LEFT_ALT X  &mt LEFT_CONTROL C  &mt LEFT_SHIFT V  &trans     &trans  &trans          &trans  &trans  &trans  &none
-                               &trans              &space_num        &kp TAB    &trans  &studio_unlock  &trans
+       &trans  &trans              &trans                  &trans                &trans     &trans  &trans  &trans  &trans  &trans
+       &trans  &mt_und LEFT_ALT S  &mt_und LEFT_CONTROL D  &mt_und LEFT_SHIFT F  &trans     &trans  &trans  &trans  &trans  &trans
+&none  &trans  &trans              &trans                  &trans                &trans     &trans  &trans  &trans  &trans  &trans  &none
+                                   &trans                  &space_num            &kp TAB    &trans  &trans  &trans
             >;
 
             label = "SAI";
@@ -293,7 +294,7 @@
         &kp ESC    &kp N1  &kp N2  &kp N3     &kp R      &trans  &trans  &trans  &trans  &trans
         &kp Q      &kp A   &kp W   &kp D      &kp E      &trans  &trans  &trans  &trans  &trans
 &trans  &kp LSHFT  &kp Z   &kp S   &kp C      &kp V      &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &kp SPACE  &kp TAB    &trans  &tog 8  &trans
+                           &trans  &kp SPACE  &kp TAB    &trans  &tog 7  &trans
             >;
 
             label = "WASD";
@@ -305,7 +306,7 @@
 
         num_nav {
             if-layers = <1 4>;
-            then-layer = <6>;
+            then-layer = <5>;
         };
     };
 };
