@@ -35,7 +35,10 @@
     quick-tap-ms = <100>;
 };
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE SPACE MINUS>; };
+&caps_word {
+    continue-list = <UNDERSCORE BACKSPACE SPACE MINUS>;
+    mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+};
 
 / {
     behaviors {
