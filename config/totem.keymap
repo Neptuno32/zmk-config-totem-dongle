@@ -96,15 +96,6 @@
             hold-while-undecided;
         };
 
-        sailayer: sailayer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SAILAYER";
-            #binding-cells = <0>;
-            bindings = <&sk RIGHT_ALT>, <&to 6>;
-
-            tapping-term-ms = <240>;
-        };
-
         magic_shift: magic_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_SHIFT";
@@ -280,10 +271,10 @@
 
         SAI {
             bindings = <
-       &trans  &trans              &trans                  &trans                &trans     &trans  &trans  &trans  &trans  &trans
-       &trans  &mt_und LEFT_ALT S  &mt_und LEFT_CONTROL D  &mt_und LEFT_SHIFT F  &trans     &trans  &trans  &trans  &trans  &trans
-&none  &trans  &trans              &trans                  &trans                &trans     &trans  &trans  &trans  &trans  &trans  &none
-                                   &trans                  &space_num            &kp TAB    &trans  &trans  &trans
+       &trans  &trans              &trans                  &trans                &trans            &trans  &trans  &trans  &trans  &trans
+       &trans  &mt_und LEFT_ALT S  &mt_und LEFT_CONTROL D  &mt_und LEFT_SHIFT F  &trans            &trans  &trans  &trans  &trans  &trans
+&none  &trans  &trans              &trans                  &trans                &trans            &trans  &trans  &trans  &trans  &trans  &none
+                                   &trans                  &space_num            &sk LEFT_SHIFT    &trans  &trans  &trans
             >;
 
             label = "SAI";
