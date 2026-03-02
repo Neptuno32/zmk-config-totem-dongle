@@ -184,6 +184,12 @@
             bindings = <&hml_und LC(LEFT_ALT) ESCAPE>;
             key-positions = <12 11>;
         };
+
+        combo_num_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <12 13>;
+            layers = <1>;
+        };
     };
 
     macros {
