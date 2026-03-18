@@ -11,7 +11,7 @@ include:
   - board: xiao_ble//zmk
     shield: totem_right rgbled_adapter
   - board: xiao_ble//zmk
-    shield: totem_dongle rgbled_adapter
+    shield: totem_dongle rgbled_adapter aw_hid_adapter
     snippet: studio-rpc-usb-uart
   - board: xiao_ble//zmk
     shield: settings_reset
