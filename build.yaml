@@ -11,7 +11,7 @@ include:
   - board: xiao_ble//zmk
     shield: totem_right rgbled_adapter
   - board: xiao_ble//zmk
-    shield: totem_dongle raw_hid # <-- required for Raw HID support
+    shield: totem_dongle raw_hid_adapter # <-- required for Raw HID support
     snippet: studio-rpc-usb-uart # <-- required for ZMK Studio support
   - board: xiao_ble//zmk
     shield: settings_reset
