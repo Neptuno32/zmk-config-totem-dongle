@@ -12,6 +12,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors/num_word.dtsi>
 
 #define Base        0
 #define Num         1
