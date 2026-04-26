@@ -12,7 +12,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dts/behaviors/num_word.dtsi>
 
 #define Base        0
 #define Num         1
@@ -52,6 +51,13 @@
             };
 
             label = "SHIFT_REPEAT";
+        };
+
+        num_word: num_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-numbers;
         };
 
         hml: homerow_mods_left {
