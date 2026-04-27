@@ -233,7 +233,7 @@
         Sym {
             bindings = <
        &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DOLLAR       &kp PERCENT    &kp AT         &kp AMPERSAND  &kp ASTERISK   &kp RA(N)  &kp GRAVE
-       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT       &kp BACKSLASH  &kp PLUS       &kp MINUS      &kp SLASH  &kp DOUBLE_QUOTES
+       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL      &kp BACKSLASH  &kp PLUS       &kp MINUS      &kp SLASH  &kp DOUBLE_QUOTES
 &none  &kp TILDE       &kp LBKT              &kp RBKT               &kp UNDERSCORE   &kp HASH       &kp PIPE       &kp EXCL       &kp SEMICOLON  &kp COLON  &kp QUESTION       &none
                                              &none                  &trans           &mo 4          &mo 4          &trans         &none
             >;
