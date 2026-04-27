@@ -134,7 +134,7 @@
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
-            layers = <0 1 5>;
+            layers = <0 3 5>;
         };
 
         combo_del_r {
@@ -158,25 +158,25 @@
         combo_num_pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <12 11>;
-            layers = <1>;
+            layers = <3>;
         };
 
         combo_num_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <23 22>;
-            layers = <1>;
+            layers = <3>;
         };
 
         combo_nav_pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <18 17>;
-            layers = <3>;
+            layers = <4>;
         };
 
         combo_nav_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
-            layers = <3>;
+            layers = <4>;
         };
 
         combo_sai_escLcLalt {
@@ -187,7 +187,7 @@
         combo_num_enter {
             bindings = <&kp ENTER>;
             key-positions = <12 13>;
-            layers = <1>;
+            layers = <3>;
         };
     };
 
@@ -197,10 +197,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 1 &kp SPACE>,
+                <&mo 3 &kp SPACE>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 1 &kp SPACE>;
+                <&mo 3 &kp SPACE>;
 
             label = "SPACE_NUM";
         };
@@ -215,19 +215,8 @@
        &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y      &kp U              &kp I                &kp O            &kp P
        &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H      &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
 &none  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N      &kp M              &kp COMMA            &kp PERIOD       &kp MINUS                   &none
-                                         &none                    &lt 1 SPACE            &lt 2 TAB    &lt 2 RET  &magic_shift 3 0   &none
+                                         &none                    &lt 3 SPACE            &lt 1 TAB    &lt 1 RET  &magic_shift 4 0   &none
             >;
-        };
-
-        Num {
-            bindings = <
-       &kp HOME        &tog 5             &none            &kp END     &none          &none      &kp N7  &kp N8  &kp N9  &none
-       &kp LC(Z)       &kp LC(X)          &kp LC(C)        &kp LC(V)   &kp LC(Y)      &kp MINUS  &kp N4  &kp N5  &kp N6  &kp N0
-&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PAUSE    &kp COMMA  &kp N1  &kp N2  &kp N3  &kp DOT  &none
-                                          &none            &none       &none          &kp EQUAL  &kp N0  &none
-            >;
-
-            label = "Num";
         };
 
         Sym {
@@ -241,10 +230,21 @@
             label = "Sym";
         };
 
+        Num {
+            bindings = <
+       &kp HOME        &tog 5             &none            &kp END     &none          &none      &kp N7  &kp N8  &kp N9  &none
+       &kp LC(Z)       &kp LC(X)          &kp LC(C)        &kp LC(V)   &kp LC(Y)      &kp MINUS  &kp N4  &kp N5  &kp N6  &kp N0
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PAUSE    &kp COMMA  &kp N1  &kp N2  &kp N3  &kp DOT  &none
+                                          &none            &none       &none          &kp EQUAL  &kp N0  &none
+            >;
+
+            label = "Num";
+        };
+
         Nav {
             bindings = <
        &none     &none     &none      &none      &none    &kp INSERT   &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 3       &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 4       &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
 &none  &none     &none     &none      &none      &none    &kp C_PAUSE  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
                            &none      &trans     &none    &none        &none           &none
             >;
