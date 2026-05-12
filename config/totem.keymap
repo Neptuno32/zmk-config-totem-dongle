@@ -126,24 +126,6 @@
             flavor = "tap-preferred";
             hold-while-undecided;
         };
-
-        qstn_mark: qstn_mark {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QSTN_MARK";
-            bindings = <&kp QUESTION>, <&kp RA(QUESTION)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        excl_mark: excl_mark {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXCL_MARK";
-            bindings = <&kp EXCLAMATION>, <&kp RA(EXCLAMATION)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
     };
 
     combos {
@@ -210,10 +192,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3 &kp SPACE>,
+                <&mo 2 &kp SPACE>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3 &kp SPACE>;
+                <&mo 2 &kp SPACE>;
 
             label = "SPACE_NUM";
         };
@@ -267,10 +249,10 @@
 
         Fun {
             bindings = <
-       &kp F12           &kp F7           &kp F8               &kp F9             &none    &none  &kp F7             &kp F8               &kp F9           &kp F12
-       &mt F11 LEFT_GUI  &mt F4 LEFT_ALT  &mt F5 LEFT_CONTROL  &mt F6 LEFT_SHIFT  &none    &none  &mt F4 LEFT_SHIFT  &mt F5 LEFT_CONTROL  &mt F6 LEFT_ALT  &mt F11 LEFT_GUI
-&none  &kp F10           &kp F1           &kp F2               &kp F3             &none    &none  &kp F1             &kp F2               &kp F3           &kp F10           &none
-                                          &none                &none              &none    &none  &none              &none
+       &kp F12           &kp F7           &kp F8               &kp F9             &none             &none  &kp F7             &kp F8               &kp F9           &kp F12
+       &mt F11 LEFT_GUI  &mt F4 LEFT_ALT  &mt F5 LEFT_CONTROL  &mt F6 LEFT_SHIFT  &studio_unlock    &none  &mt F4 LEFT_SHIFT  &mt F5 LEFT_CONTROL  &mt F6 LEFT_ALT  &mt F11 LEFT_GUI
+&none  &kp F10           &kp F1           &kp F2               &kp F3             &none             &none  &kp F1             &kp F2               &kp F3           &kp F10           &none
+                                          &none                &none              &none             &none  &none              &none
             >;
 
             label = "Fun";
