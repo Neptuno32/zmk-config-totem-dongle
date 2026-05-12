@@ -239,10 +239,10 @@
 
         Sym {
             bindings = <
-       &kp GRAVE       &kp CARET                       &kp DOLLAR                          &kp HASH         &none    &kp PIPE   &kp AMPERSAND    &kp PERCENT    &kp AT     &kp BACKSLASH
-       &kp LEFT_BRACE  &mt RIGHT_ALT LEFT_PARENTHESIS  &mt LEFT_CONTROL RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &none    &kp EQUAL  &kp PLUS         &kp ASTERISK   &kp SLASH  &kp QUESTION
-&none  &kp TILDE       &kp LBKT                        &kp RBKT                            &none            &none    &kp RA(N)  &kp EXCLAMATION  &kp SEMICOLON  &kp COLON  &kp UNDER      &none
-                                                       &none                               &trans           &mo 4    &mo 4      &trans           &none
+       &kp GRAVE          &kp PERCENT    &kp AMPERSAND     &kp RA(COLON)     &none    &kp PIPE   &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp BACKSLASH
+       &kp RA(BACKSLASH)  &kp AT         &kp HASH          &kp DOLLAR        &none    &kp EQUAL  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp QUESTION
+&none  &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp RA(NUMBER_1)  &none    &kp RA(N)  &kp EXCLAMATION    &kp SEMICOLON          &kp COLON        &kp UNDER      &none
+                                         &none             &trans            &mo 4    &mo 4      &trans             &none
             >;
 
             label = "Sym";
