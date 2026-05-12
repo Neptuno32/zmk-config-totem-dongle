@@ -152,13 +152,13 @@
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
-            layers = <0 3 5>;
+            layers = <0>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
             key-positions = <18 17>;
-            layers = <0 5>;
+            layers = <0>;
         };
 
         combo_esc {
@@ -170,42 +170,37 @@
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0 5>;
+            layers = <0>;
         };
 
         combo_num_pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <12 11>;
-            layers = <3>;
+            layers = <2>;
         };
 
         combo_num_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <23 22>;
-            layers = <3>;
-        };
-
-        combo_nav_pscrn {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <18 17>;
-            layers = <4>;
+            layers = <2>;
         };
 
         combo_nav_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
-            layers = <4>;
+            layers = <3>;
         };
 
         combo_sai_escLcLalt {
             bindings = <&hml_und LC(LEFT_ALT) ESCAPE>;
             key-positions = <12 11>;
+            layers = <5>;
         };
 
         combo_num_enter {
             bindings = <&kp ENTER>;
             key-positions = <12 13>;
-            layers = <3>;
+            layers = <2>;
         };
     };
 
