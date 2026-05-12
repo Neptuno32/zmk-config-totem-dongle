@@ -234,10 +234,10 @@
 
         Sym {
             bindings = <
-       &kp GRAVE      &kp PERCENT       &kp CARET              &kp AMPERSAND              &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
-       &kp RA(SLASH)  &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LEFT_SHIFT LC(DOLLAR)  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
-&none  &kp TILDE      &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)           &none    &kp RA(N)  &kp EXCLAMATION              &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
-                                        &none                  &trans                     &mo 4    &mo 4      &trans                       &none
+       &kp GRAVE  &kp PERCENT       &kp CARET              &kp AMPERSAND              &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
+       &kp EXCL   &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LEFT_SHIFT LC(DOLLAR)  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
+&none  &kp TILDE  &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)           &none    &kp RA(N)  &kp RA(SLASH)                &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
+                                    &none                  &trans                     &mo 4    &mo 4      &trans                       &none
             >;
 
             label = "Sym";
