@@ -250,7 +250,7 @@
         Fun {
             bindings = <
        &kp F12           &kp F7           &kp F8               &kp F9             &none             &none  &kp F7             &kp F8               &kp F9           &kp F12
-       &mt F11 LEFT_GUI  &mt F4 LEFT_ALT  &mt F5 LEFT_CONTROL  &mt F6 LEFT_SHIFT  &studio_unlock    &none  &mt F4 LEFT_SHIFT  &mt F5 LEFT_CONTROL  &mt F6 LEFT_ALT  &mt F11 LEFT_GUI
+       &mt LEFT_GUI F11  &mt LEFT_ALT F4  &mt LEFT_CONTROL F5  &mt LEFT_SHIFT F6  &studio_unlock    &none  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &mt LEFT_GUI F11
 &none  &kp F10           &kp F1           &kp F2               &kp F3             &none             &none  &kp F1             &kp F2               &kp F3           &kp F10           &none
                                           &none                &none              &none             &none  &none              &none
             >;
