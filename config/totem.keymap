@@ -126,6 +126,26 @@
             flavor = "tap-preferred";
             hold-while-undecided;
         };
+
+        magic_shift_2: magic_shift_2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_SHIFT_2";
+            bindings = <&mo>, <&shift_caps_2>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+        };
+
+        shift_caps_2: shift_caps_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_CAPS_2";
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -207,18 +227,18 @@
         Base {
             label = "Base";
             bindings = <
-       &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y      &kp U              &kp I                &kp O            &kp P
-       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H      &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
-&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N      &kp M              &kp COMMA            &kp PERIOD       &kp MINUS                   &none
-                                         &none                    &lt 2 SPACE            &lt 1 TAB    &lt 1 RET  &magic_shift 3 0   &none
+       &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y      &kp U               &kp I                &kp O            &kp P
+       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H      &hmr LEFT_SHIFT J   &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
+&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N      &kp M               &kp COMMA            &kp PERIOD       &kp MINUS                   &none
+                                         &none                    &lt 2 SPACE            &lt 1 TAB    &lt 1 RET  &magic_shift_2 3 0  &none
             >;
         };
 
         Sym {
             bindings = <
-       &kp GRAVE  &kp PERCENT       &kp CARET              &kp AMPERSAND          &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
+       &kp TILDE  &kp PERCENT       &kp CARET              &kp AMPERSAND          &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
        &kp EXCL   &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LEFT_SHIFT DOLLAR  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
-&none  &kp TILDE  &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)       &none    &kp RA(N)  &kp RA(SLASH)                &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
+&none  &kp GRAVE  &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)       &none    &kp RA(N)  &kp RA(SLASH)                &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
                                     &none                  &trans                 &mo 4    &mo 4      &trans                       &none
             >;
 
