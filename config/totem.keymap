@@ -113,6 +113,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        sk_lt: sk_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SK_LT";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -210,10 +221,10 @@
         Base {
             label = "Base";
             bindings = <
-       &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y      &kp U              &kp I                &kp O            &kp P
-       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H      &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
-&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N      &kp M              &kp COMMA            &kp PERIOD       &kp MINUS                   &none
-                                         &none                    &lt 2 SPACE            &lt 1 TAB    &lt 1 RET  &lt 3 LEFT_SHIFT   &none
+       &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y      &kp U                &kp I                &kp O            &kp P
+       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H      &hmr LEFT_SHIFT J    &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
+&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N      &kp M                &kp COMMA            &kp PERIOD       &kp MINUS                   &none
+                                         &none                    &lt 2 SPACE            &lt 1 TAB    &lt 1 RET  &sk_lt 3 LEFT_SHIFT  &none
             >;
         };
 
