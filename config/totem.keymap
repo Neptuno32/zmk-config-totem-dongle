@@ -144,13 +144,13 @@
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <11 12>;
-            layers = <0>;
+            layers = <0 5>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0>;
+            layers = <0 5>;
         };
 
         combo_num_pscrn {
@@ -169,12 +169,6 @@
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
             layers = <3>;
-        };
-
-        combo_sai_escLcLalt {
-            bindings = <&hml_und LC(LEFT_ALT) ESCAPE>;
-            key-positions = <12 11>;
-            layers = <5>;
         };
 
         combo_caps_r {
@@ -203,7 +197,7 @@
         combo_return_l {
             bindings = <&kp RETURN>;
             key-positions = <11 12 13>;
-            layers = <0>;
+            layers = <0 5>;
         };
 
         combo_return_r {
