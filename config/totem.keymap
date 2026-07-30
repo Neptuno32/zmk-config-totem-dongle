@@ -171,17 +171,6 @@
             layers = <3>;
         };
 
-        combo_caps_r {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <16 36>;
-            layers = <0>;
-        };
-
-        combo_caps_l {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <13 33>;
-        };
-
         combo_num_pause {
             bindings = <&kp C_PAUSE>;
             key-positions = <13 12>;
@@ -194,15 +183,15 @@
             layers = <3>;
         };
 
-        combo_return_l {
-            bindings = <&kp RETURN>;
-            key-positions = <11 12 13>;
+        combo_capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <16 17 18>;
             layers = <0 5>;
         };
 
-        combo_return_r {
+        combo_return_l {
             bindings = <&kp RETURN>;
-            key-positions = <16 17 18>;
+            key-positions = <11 12 13>;
             layers = <0>;
         };
     };
