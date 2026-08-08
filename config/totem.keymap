@@ -184,7 +184,7 @@
         };
 
         combo_return_r {
-            bindings = <&kp CAPSLOCK>;
+            bindings = <&kp RETURN>;
             key-positions = <16 17 18>;
             layers = <0>;
         };
