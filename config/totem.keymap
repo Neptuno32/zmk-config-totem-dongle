@@ -244,8 +244,8 @@
 
         symbol_layer {
             bindings = <
-       &kp TILDE  &kp PERCENT       &kp CARET              &kp AMPERSAND          &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
-       &kp EXCL   &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LEFT_SHIFT DOLLAR  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
+       &kp TILDE  &none       &kp CARET              &kp AMPERSAND          &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
+       &kp EXCL   &mt RIGHT_ALT AT  &none  &mt LEFT_SHIFT DOLLAR  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
 &none  &kp GRAVE  &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)       &none    &kp RA(N)  &kp RA(SLASH)                &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
                                     &none                  &trans                 &mo 4    &mo 4      &trans                       &none
             >;
@@ -255,10 +255,10 @@
 
         number_layer {
             bindings = <
-       &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END     &none     &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
-       &csz_undo       &kp LC(X)          &kp LC(C)        &kp LC(V)   &tog 5    &kp PLUS      &kp N4  &kp N5  &kp N6  &kp PERIOD
-&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none     &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS   &none
-                                          &none            &none       &none     &kp EQUAL     &kp N0  &none
+       &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END     &none     &kp HASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp PRCNT
+       &csz_undo       &kp LC(X)          &kp LC(C)        &kp LC(V)   &tog 5    &kp KP_N0      &kp KP_N6  &kp KP_N5  &kp KP_N6  &kp FSLH
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none     &kp CARET     &kp KP_N1  &kp KP_N2  &kp KP_N2  &none   &none
+                                          &none            &none       &none     &none     &kp KP_DOT  &none
             >;
 
             label = "NUM";
