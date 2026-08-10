@@ -146,14 +146,14 @@
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <11 12>;
-            layers = <0 4>;
+            layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0 4>;
+            layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
@@ -169,20 +169,10 @@
             layers = <1>;
         };
 
-        combo_nav_mute {
-            bindings = <&kp C_MUTE>;
-            key-positions = <28 29>;
-        };
-
         combo_num_pause {
             bindings = <&kp C_PAUSE>;
             key-positions = <13 12>;
             layers = <1>;
-        };
-
-        combo_nav_pause {
-            bindings = <&kp C_PAUSE>;
-            key-positions = <17 16>;
         };
 
         combo_return_r {
@@ -200,7 +190,7 @@
         combo_plus_num {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp PLUS>;
+            bindings = <&kp KP_PLUS>;
             layers = <1>;
         };
 
@@ -213,19 +203,19 @@
 
         combo_close_parenthesis {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <17 16>;
+            key-positions = <12 13>;
             layers = <2>;
         };
 
         combo_close_brackets {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <17 18>;
+            key-positions = <12 11>;
             layers = <2>;
         };
 
         combo_close_braces {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <16 17 18>;
+            key-positions = <11 12 13>;
             layers = <2>;
         };
     };
@@ -271,10 +261,10 @@
 
         symbol_nav_layer {
             bindings = <
-       &kp LC(HOME)    &none           &none         &kp LC(END)      &none     &kp RA(SLASH)     &kp HASH                         &kp PERCENT                    &kp AT                    &kp QUESTION
-       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &tog 2    &kp RA(NUMBER_1)  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_CONTROL LEFT_BRACKET  &mt RIGHT_ALT LEFT_BRACE  &kp EXCLAMATION
-&none  &none           &kp GRAVE       &kp TILDE     &none            &none     &kp RA(N)         &kp PIPE                         &kp AMPERSAND                  &kp DOLLAR                &kp BACKSLASH    &none
-                                       &none         &trans           &mo 3     &mo 3             &trans                           &none
+       &kp QUESTION     &kp AT          &kp PERCENT       &kp HASH              &none     &kp RA(SLASH)     &kp HASH                         &kp PERCENT                    &kp AT                    &kp QUESTION
+       &kp EXCLAMATION  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &tog 2    &kp RA(NUMBER_1)  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_CONTROL LEFT_BRACKET  &mt RIGHT_ALT LEFT_BRACE  &kp EXCLAMATION
+&none  &none            &kp GRAVE       &kp TILDE         &none                 &none     &kp RA(N)         &kp PIPE                         &kp AMPERSAND                  &kp DOLLAR                &kp BACKSLASH    &none
+                                        &none             &trans                &mo 3     &mo 3             &trans                           &none
             >;
 
             label = "SYMNAV";
