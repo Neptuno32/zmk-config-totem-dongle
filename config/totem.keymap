@@ -271,8 +271,8 @@
 
         symbol_nav_layer {
             bindings = <
-       &kp LC(HOME)    &none           &none         &kp LC(END)      &kp N4    &kp RA(SLASH)     &kp HASH                         &kp PERCENT                    &kp AT                    &kp QUESTION
-       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp N4    &kp RA(NUMBER_1)  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_CONTROL LEFT_BRACKET  &mt RIGHT_ALT LEFT_BRACE  &kp EXCLAMATION
+       &kp LC(HOME)    &none           &none         &kp LC(END)      &none     &kp RA(SLASH)     &kp HASH                         &kp PERCENT                    &kp AT                    &kp QUESTION
+       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &tog 2    &kp RA(NUMBER_1)  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_CONTROL LEFT_BRACKET  &mt RIGHT_ALT LEFT_BRACE  &kp EXCLAMATION
 &none  &none           &kp GRAVE       &kp TILDE     &none            &none     &kp RA(N)         &kp PIPE                         &kp AMPERSAND                  &kp DOLLAR                &kp BACKSLASH    &none
                                        &none         &trans           &mo 3     &mo 3             &trans                           &none
             >;
