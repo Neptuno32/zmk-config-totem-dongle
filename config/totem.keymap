@@ -185,20 +185,21 @@
             bindings = <&kp RETURN>;
             key-positions = <11 12 13>;
             layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_plus_num {
-            timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp KP_PLUS>;
             layers = <2>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_minus_num {
-            timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp MINUS>;
             layers = <2>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_close_parenthesis {
@@ -222,6 +223,7 @@
         combo_equals {
             bindings = <&kp EQUAL>;
             key-positions = <16 17 18>;
+            require-prior-idle-ms = <125>;
         };
     };
 
