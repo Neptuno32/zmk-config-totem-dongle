@@ -29,13 +29,10 @@
 };
 
 &mt {
-    hold-while-undecided;
     tapping-term-ms = <170>;
     flavor = "tap-preferred";
     quick-tap-ms = <100>;
 };
-
-&caps_word { continue-list = <UNDERSCORE BACKSPACE SPACE MINUS>; };
 
 / {
     behaviors {
@@ -96,26 +93,6 @@
             hold-while-undecided;
         };
 
-        magic_shift: magic_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_SHIFT";
-            bindings = <&mo>, <&shift_caps>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-        };
-
-        shift_caps: shift_caps {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_CAPS";
-            bindings = <&shift_repeat>, <&caps_word>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         mt_und: mt_und {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_UND";
@@ -127,6 +104,26 @@
             flavor = "tap-preferred";
             hold-while-undecided;
         };
+
+        csz_undo: csz_undo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CSZ_UNDO";
+            bindings = <&kp LC(Z)>, <&kp LC(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        sk_lt: sk_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SK_LT";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -135,60 +132,67 @@
         combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
-            layers = <0 1 6>;
+            layers = <0>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
             key-positions = <18 17>;
-            layers = <0 6>;
+            layers = <0>;
         };
 
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <11 12>;
-            layers = <0>;
+            layers = <0 5>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0 6>;
+            layers = <0 5>;
         };
 
         combo_num_pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <12 11>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_num_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <23 22>;
-            layers = <1>;
-        };
-
-        combo_nav_pscrn {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <18 17>;
-            layers = <4>;
+            layers = <2>;
         };
 
         combo_nav_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
-            layers = <4>;
+            layers = <3>;
         };
 
-        combo_sai_escLcLalt {
-            bindings = <&hml_und LC(LEFT_ALT) ESCAPE>;
-            key-positions = <12 11>;
+        combo_num_pause {
+            bindings = <&kp C_PAUSE>;
+            key-positions = <13 12>;
+            layers = <2>;
         };
 
-        combo_num_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <12 13>;
-            layers = <1>;
+        combo_nav_pause {
+            bindings = <&kp C_PAUSE>;
+            key-positions = <17 16>;
+            layers = <3>;
+        };
+
+        combo_return_r {
+            bindings = <&kp RETURN>;
+            key-positions = <16 17 18>;
+            layers = <0>;
+        };
+
+        combo_return_l {
+            bindings = <&kp RETURN>;
+            key-positions = <11 12 13>;
+            layers = <0>;
         };
     };
 
@@ -198,10 +202,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 1 &kp SPACE>,
+                <&mo 2 &kp SPACE>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 1 &kp SPACE>;
+                <&mo 2 &kp SPACE>;
 
             label = "SPACE_NUM";
         };
@@ -227,38 +231,36 @@
 &none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PAUSE    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &none
                                           &none            &none       &none          &kp EQUAL     &kp N0  &none
             >;
+        };
+
+        Sym {
+            bindings = <
+       &kp TILDE  &kp PERCENT       &kp CARET              &kp AMPERSAND          &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
+       &kp EXCL   &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LEFT_SHIFT DOLLAR  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
+&none  &kp GRAVE  &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)       &none    &kp RA(N)  &kp RA(SLASH)                &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
+                                    &none                  &trans                 &mo 4    &mo 4      &trans                       &none
+            >;
+
+            label = "Sym";
+        };
+
+        Num {
+            bindings = <
+       &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END     &none     &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
+       &csz_undo       &kp LC(X)          &kp LC(C)        &kp LC(V)   &tog 5    &kp PLUS      &kp N4  &kp N5  &kp N6  &kp PERIOD
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none     &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS   &none
+                                          &none            &none       &none     &kp EQUAL     &kp N0  &none
+            >;
 
             label = "Num";
         };
 
-        SymL {
-            bindings = <
-       &kp RA(NUMBER_1)  &kp PERCENT  &kp AMPERSAND  &kp RA(COLON)  &kp TILDE    &none  &none      &none      &none         &none
-       &kp EXCLAMATION   &kp AT       &kp HASH       &kp DOLLAR     &kp GRAVE    &none  &kp LSHFT  &kp LCTRL  &kp LEFT_ALT  &kp LGUI
-&none  &none             &none        &none          &none          &none        &none  &none      &none      &none         &none     &none
-                                      &none          &none          &none        &none  &none      &none
-            >;
-
-            label = "SymL";
-        };
-
-        SymR {
-            bindings = <
-       &none     &none         &none      &none      &none    &kp PIPE       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RA(LC(SLASH))
-       &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none    &kp BACKSLASH  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp QUESTION
-&none  &none     &none         &none      &none      &none    &kp RA(N)      &none              &kp SEMICOLON          &kp COLON        &kp UNDER          &none
-                               &none      &none      &none    &none          &none              &none
-            >;
-
-            label = "SymR";
-        };
-
         Nav {
             bindings = <
-       &none     &none     &none      &none      &none    &kp INSERT   &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 4       &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
-&none  &none     &none     &none      &none      &none    &kp C_PAUSE  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
-                           &none      &trans     &none    &none        &none           &none
+       &none     &none     &none      &none      &none    &kp INSERT  &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 3      &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
+&none  &none     &none     &none      &none      &none    &none       &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
+                           &none      &trans     &none    &none       &none           &none
             >;
 
             label = "Nav";
@@ -266,10 +268,10 @@
 
         Fun {
             bindings = <
-       &none     &studio_unlock  &none      &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
-       &kp LGUI  &kp LALT        &kp LCTRL  &kp LSHFT  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
-&none  &none     &none           &none      &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
-                                 &none      &none      &none    &none  &none   &none
+       &kp F12           &kp F7           &kp F8               &kp F9             &none             &none  &kp F7             &kp F8               &kp F9           &kp F12
+       &mt LEFT_GUI F11  &mt LEFT_ALT F4  &mt LEFT_CONTROL F5  &mt LEFT_SHIFT F6  &studio_unlock    &none  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &mt LEFT_GUI F11
+&none  &kp F10           &kp F1           &kp F2               &kp F3             &none             &none  &kp F1             &kp F2               &kp F3           &kp F10           &none
+                                          &none                &none              &none             &none  &none              &none
             >;
 
             label = "Fun";
@@ -285,25 +287,14 @@
 
             label = "SAI";
         };
-
-        WASD {
-            bindings = <
-        &kp ESC    &kp N1  &kp N2  &kp N3     &kp R      &trans  &trans  &trans  &trans  &trans
-        &kp Q      &kp A   &kp W   &kp D      &kp E      &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp Z   &kp S   &kp C      &kp V      &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &kp SPACE  &kp TAB    &trans  &tog 7  &trans
-            >;
-
-            label = "WASD";
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         num_nav {
-            if-layers = <1 4>;
-            then-layer = <5>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
