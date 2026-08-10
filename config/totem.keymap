@@ -198,6 +198,18 @@
             key-positions = <11 12 13>;
             layers = <0>;
         };
+        combo_plus_num {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp PLUS>;
+            layers = <2>;
+        };
+        combo_minus_num {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp MINUS>;
+            layers = <2>;
+        };
     };
 
     macros {
