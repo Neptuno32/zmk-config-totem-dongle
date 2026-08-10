@@ -133,24 +133,28 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
             layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
             key-positions = <18 17>;
             layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <11 12>;
             layers = <0 5>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
             layers = <0 5>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_num_pscrn {
