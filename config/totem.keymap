@@ -218,6 +218,11 @@
             key-positions = <11 12 13>;
             layers = <1>;
         };
+
+        combo_equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <16 17 18>;
+        };
     };
 
     macros {
