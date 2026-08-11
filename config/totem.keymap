@@ -257,10 +257,10 @@
 
         symbol_nav_layer {
             bindings = <
-       &kp QUESTION     &kp AT          &kp PERCENT       &kp HASH              &kp RA(SLASH)       &kp INSERT  &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
-       &kp EXCLAMATION  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RA(NUMBER_1)    &tog 1      &kp LEFT        &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW
-&none  &kp BACKSLASH    &kp PIPE        &kp AMPERSAND     &kp DOLLAR            &none               &kp RA(N)   &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
-                                        &none             &trans                &none               &none       &none           &none
+       &kp QUESTION     &kp AT                   &kp PERCENT                    &kp HASH                         &kp RA(SLASH)       &kp INSERT  &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
+       &kp EXCLAMATION  &mt LEFT_ALT LEFT_BRACE  &mt LEFT_CONTROL LEFT_BRACKET  &mt LEFT_SHIFT LEFT_PARENTHESIS  &kp RA(NUMBER_1)    &tog 1      &kp LEFT        &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW
+&none  &kp BACKSLASH    &kp PIPE                 &kp AMPERSAND                  &kp DOLLAR                       &none               &kp RA(N)   &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
+                                                 &none                          &trans                           &none               &none       &none           &none
             >;
 
             label = "SYMNAV";
