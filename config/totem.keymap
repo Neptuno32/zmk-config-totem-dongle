@@ -307,7 +307,7 @@
             bindings = <
        &kp END     &kp PG_UP     &kp PG_DN     &kp HOME    &none     &kp CARET  &kp N7        &kp N8  &kp N9  &kp ASTERISK
        &csz_undo   &kp LC(X)     &kp LC(C)     &kp LC(V)   &tog 4    &kp DOT    &kp N4        &kp N5  &kp N6  &kp SLASH
-&none  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none     &none      &kp NUMBER_1  &kp N2  &kp N3  &none         &none
+&none  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none     &kp RA(N)  &kp NUMBER_1  &kp N2  &kp N3  &none         &none
                                  &none         &none       &none     &none      &kp NUMBER_0  &none
             >;
 
