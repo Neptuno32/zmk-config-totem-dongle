@@ -24,8 +24,8 @@
 &sk { quick-release; };
 
 &lt {
-    quick-tap-ms = <100>;
-    tapping-term-ms = <170>;
+    quick-tap-ms = <175>;
+    flavor = "balanced";
 };
 
 &mt {
@@ -36,20 +36,6 @@
 
 / {
     behaviors {
-        shift_repeat: shift_repeat {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>;
-
-            repeat {
-                trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
-                bindings = <&key_repeat>;
-                max-prior-idle-ms = <350>;
-            };
-
-            label = "SHIFT_REPEAT";
-        };
-
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
@@ -93,9 +79,9 @@
             hold-while-undecided;
         };
 
-        mt_und: mt_und {
+        mt_und: homerow_mods_undecided {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_UND";
+            label = "HOMEROW_MODS_UNDECIDED";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -124,6 +110,24 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        morph_excl: morph_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_EXCL";
+            bindings = <&kp EXCL>, <&kp RA(NUMBER_1)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        morph_qstn: morph_qstn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_QSTN";
+            bindings = <&kp QUESTION>, <&kp RA(SLASH)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -133,66 +137,77 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
             key-positions = <18 17>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <11 12>;
-            layers = <0 5>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0 5>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_num_pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <12 11>;
             layers = <2>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_num_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <23 22>;
             layers = <2>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_nav_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
             layers = <3>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_num_pause {
             bindings = <&kp C_PAUSE>;
             key-positions = <13 12>;
             layers = <2>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_nav_pause {
             bindings = <&kp C_PAUSE>;
             key-positions = <17 16>;
             layers = <3>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_return_r {
             bindings = <&kp RETURN>;
             key-positions = <16 17 18>;
-            layers = <0>;
+            layers = <0 2>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_return_l {
             bindings = <&kp RETURN>;
             key-positions = <11 12 13>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -226,10 +241,10 @@
 
         Sym {
             bindings = <
-       &kp TILDE  &kp PERCENT       &kp CARET              &kp AMPERSAND          &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
-       &kp EXCL   &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LEFT_SHIFT DOLLAR  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
-&none  &kp GRAVE  &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)       &none    &kp RA(N)  &kp RA(SLASH)                &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
-                                    &none                  &trans                 &mo 4    &mo 4      &trans                       &none
+       &morph_qstn  &kp PERCENT       &kp DOLLAR             &kp AMPERSAND                &none        &none      &kp RIGHT_PARENTHESIS            &kp RIGHT_BRACKET              &kp RIGHT_BRACE           &kp BACKSLASH
+       &morph_excl  &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LC(DOLLAR) RA(NUMBER_1)  &kp EQUAL    &kp PIPE   &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_CONTROL LEFT_BRACKET  &mt RIGHT_ALT LEFT_BRACE  &kp UNDER
+&none  &none        &kp GRAVE         &kp TILDE              &kp RA(LC(DOLLAR))           &none        &kp RA(N)  &none                            &kp SEMICOLON                  &kp COLON                 &none          &none
+                                      &none                  &trans                       &mo 4        &mo 4      &trans                           &none
             >;
 
             label = "Sym";
@@ -237,10 +252,10 @@
 
         Num {
             bindings = <
-       &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END     &none     &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
-       &csz_undo       &kp LC(X)          &kp LC(C)        &kp LC(V)   &tog 5    &kp PLUS      &kp N4  &kp N5  &kp N6  &kp PERIOD
-&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none     &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS   &none
-                                          &none            &none       &none     &kp EQUAL     &kp N0  &none
+       &kp END         &kp PAGE_UP        &kp LS(PAGE_DOWN)  &kp HOME    &none    &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
+       &csz_undo       &kp LC(X)          &kp LC(C)          &kp LC(V)   &none    &kp DOT       &kp N4  &kp N5  &kp N6  &kp PLUS
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp C_NEXT  &none    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &none
+                                          &none              &none       &none    &kp EQUAL     &kp N0  &none
             >;
 
             label = "Num";
