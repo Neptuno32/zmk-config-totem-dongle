@@ -24,8 +24,8 @@
 &sk { quick-release; };
 
 &lt {
-    quick-tap-ms = <175>;
-    flavor = "balanced";
+    quick-tap-ms = <100>;
+    tapping-term-ms = <170>;
 };
 
 &mt {
@@ -36,6 +36,20 @@
 
 / {
     behaviors {
+        shift_repeat: shift_repeat {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>;
+
+            repeat {
+                trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+                bindings = <&key_repeat>;
+                max-prior-idle-ms = <350>;
+            };
+
+            label = "SHIFT_REPEAT";
+        };
+
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
@@ -79,13 +93,13 @@
             hold-while-undecided;
         };
 
-        mt_und: homerow_mods_undecided {
+        mt_und: mt_und {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_UNDECIDED";
+            label = "MT_UND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             quick-tap-ms = <170>;
             flavor = "tap-preferred";
             hold-while-undecided;
@@ -119,28 +133,24 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
             layers = <0>;
-            require-prior-idle-ms = <150>;
         };
 
         combo_del_r {
             bindings = <&kp DELETE>;
             key-positions = <18 17>;
             layers = <0>;
-            require-prior-idle-ms = <150>;
         };
 
         combo_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <11 12>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
+            layers = <0 5>;
         };
 
         combo_del_l {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
+            layers = <0 5>;
         };
 
         combo_num_pscrn {
@@ -155,147 +165,34 @@
             layers = <2>;
         };
 
+        combo_nav_mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <28 29>;
+            layers = <3>;
+        };
+
         combo_num_pause {
             bindings = <&kp C_PAUSE>;
             key-positions = <13 12>;
             layers = <2>;
         };
 
+        combo_nav_pause {
+            bindings = <&kp C_PAUSE>;
+            key-positions = <17 16>;
+            layers = <3>;
+        };
+
         combo_return_r {
             bindings = <&kp RETURN>;
             key-positions = <16 17 18>;
             layers = <0>;
-            require-prior-idle-ms = <150>;
         };
 
         combo_return_l {
             bindings = <&kp RETURN>;
             key-positions = <11 12 13>;
             layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_plus_num {
-            key-positions = <16 17>;
-            bindings = <&kp KP_PLUS>;
-            layers = <2>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_minus_num {
-            key-positions = <17 18>;
-            bindings = <&kp MINUS>;
-            layers = <2>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_close_parenthesis {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <12 13>;
-            layers = <1>;
-        };
-
-        combo_close_brackets {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <12 11>;
-            layers = <1>;
-        };
-
-        combo_close_braces {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <11 12 13>;
-            layers = <1>;
-        };
-
-        combo_equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <16 17 18>;
-            require-prior-idle-ms = <150>;
-            layers = <2>;
-        };
-
-        combo_less {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <27 28>;
-            require-prior-idle-ms = <150>;
-            layers = <2>;
-        };
-
-        combo_greater {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <28 29>;
-            require-prior-idle-ms = <150>;
-            layers = <2>;
-        };
-
-        combo_left_bracket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <1 2>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_right_bracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <2 3>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_right_parenthesis {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <7 8>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_left_parenthesis {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <7 6>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <27 28>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_colon {
-            bindings = <&kp COLON>;
-            key-positions = <28 29>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_caret {
-            bindings = <&kp CARET>;
-            key-positions = <7 8>;
-            require-prior-idle-ms = <150>;
-            layers = <2>;
-        };
-
-        combo_left_bracket_low {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <22 23>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_right_brace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <23 24>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_star {
-            bindings = <&kp LS(ASTERISK)>;
-            key-positions = <6 7>;
-            layers = <2>;
-            require-prior-idle-ms = <150>;
         };
     };
 
@@ -317,39 +214,50 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
-            label = "BASE";
+        Base {
+            label = "Base";
             bindings = <
-       &kp Q            &kp W            &kp E                    &kp R                  &kp T      &kp Y         &kp U                &kp I                &kp O            &kp P
-       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G      &kp H         &hmr LEFT_SHIFT J    &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &kp SINGLE_QUOTE
-&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B      &kp N         &kp M                &kp COMMA            &kp PERIOD       &kp MINUS         &none
-                                         &none                    &lt 2 SPACE            &kp TAB    &kp CAPSLOCK  &sk_lt 1 LEFT_SHIFT  &none
+       &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y           &kp U                &kp I                &kp O            &kp P
+       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H           &hmr LEFT_SHIFT J    &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
+&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N           &kp M                &kp COMMA            &kp PERIOD       &kp MINUS                   &none
+                                         &none                    &lt 2 SPACE            &lt 1 TAB    &lt 1 CAPSLOCK  &sk_lt 3 LEFT_SHIFT  &none
             >;
         };
 
-        symbol_nav_layer {
+        Sym {
             bindings = <
-       &kp QUESTION     &kp BACKSLASH    &kp PIPE                    &kp RA(SLASH)                &none    &kp INSERT  &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
-       &kp EXCLAMATION  &mt LEFT_ALT AT  &mt LEFT_CONTROL AMPERSAND  &mt LEFT_SHIFT RA(NUMBER_1)  &none    &tog 1      &kp LEFT        &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW
-&none  &none            &kp GRAVE        &kp TILDE                   &kp DOLLAR                   &none    &none       &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
-                                         &none                       &trans                       &none    &none       &none           &none
+       &kp TILDE  &kp PERCENT       &kp CARET              &kp AMPERSAND          &none    &kp PIPE   &kp RIGHT_BRACKET            &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE           &kp BACKSLASH
+       &kp EXCL   &mt RIGHT_ALT AT  &mt LEFT_CONTROL HASH  &mt LEFT_SHIFT DOLLAR  &none    &kp EQUAL  &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_CONTROL LEFT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACE  &kp QUESTION
+&none  &kp GRAVE  &kp LESS_THAN     &kp GREATER_THAN       &kp RA(NUMBER_1)       &none    &kp RA(N)  &kp RA(SLASH)                &kp SEMICOLON                      &kp COLON                 &kp UNDER      &none
+                                    &none                  &trans                 &mo 4    &mo 4      &trans                       &none
             >;
 
-            label = "SYMNAV";
+            label = "Sym";
         };
 
-        number_layer {
+        Num {
             bindings = <
-       &kp END     &kp PG_UP     &kp PG_DN     &kp HOME    &none     &kp HASH   &kp N7        &kp N8  &kp N9  &kp SLASH
-       &csz_undo   &kp LC(X)     &kp LC(C)     &kp LC(V)   &tog 4    &kp DOT    &kp N4        &kp N5  &kp N6  &kp UNDERSCORE
-&none  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none     &kp RA(N)  &kp NUMBER_1  &kp N2  &kp N3  &kp UNDER       &none
-                                 &none         &none       &none     &none      &kp NUMBER_0  &none
+       &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END     &none     &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
+       &csz_undo       &kp LC(X)          &kp LC(C)        &kp LC(V)   &tog 5    &kp PLUS      &kp N4  &kp N5  &kp N6  &kp PERIOD
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none     &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS   &none
+                                          &none            &none       &none     &kp EQUAL     &kp N0  &none
             >;
 
-            label = "NUM";
+            label = "Num";
         };
 
-        function_layer {
+        Nav {
+            bindings = <
+       &none     &none     &none      &none      &none    &kp INSERT  &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &tog 3      &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT_ARROW
+&none  &none     &none     &none      &none      &none    &none       &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none
+                           &none      &trans     &none    &none       &none           &none
+            >;
+
+            label = "Nav";
+        };
+
+        Fun {
             bindings = <
        &kp F12           &kp F7           &kp F8               &kp F9             &none             &none  &kp F7             &kp F8               &kp F9           &kp F12
        &mt LEFT_GUI F11  &mt LEFT_ALT F4  &mt LEFT_CONTROL F5  &mt LEFT_SHIFT F6  &studio_unlock    &none  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &mt LEFT_GUI F11
@@ -357,10 +265,10 @@
                                           &none                &none              &none             &none  &none              &none
             >;
 
-            label = "FUN";
+            label = "Fun";
         };
 
-        SAI_layer {
+        SAI {
             bindings = <
        &trans  &trans              &trans                  &trans                &trans    &trans  &trans  &trans  &trans  &trans
        &trans  &mt_und LEFT_ALT S  &mt_und LEFT_CONTROL D  &mt_und LEFT_SHIFT F  &trans    &trans  &trans  &trans  &trans  &trans
@@ -376,8 +284,8 @@
         compatible = "zmk,conditional-layers";
 
         num_nav {
-            if-layers = <2 1>;
-            then-layer = <3>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
