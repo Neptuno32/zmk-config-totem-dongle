@@ -196,6 +196,27 @@
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
+
+        magic_shift: magic_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_SHIFT";
+            bindings = <&mo>, <&shift_caps>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+        };
+
+        shift_caps: shift_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_CAPS";
+            bindings = <&shift_repeat>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
     };
 
     macros {
