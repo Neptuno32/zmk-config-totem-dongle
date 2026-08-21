@@ -121,7 +121,7 @@
         td_cl_sks: dance_cancel_skshift {
             compatible = "zmk,behavior-mod-morph";
             label = "DANCE_CANCEL_SKSHIFT";
-            bindings = <&sk LEFT_SHIFT>, <&kp A>;
+            bindings = <&sk LEFT_SHIFT>, <&none>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
