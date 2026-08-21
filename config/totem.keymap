@@ -32,6 +32,8 @@
     quick-tap-ms = <100>;
 };
 
+&sk { quick-release; };
+
 / {
     behaviors {
         hml: homerow_mods_left {
@@ -119,13 +121,13 @@
         td_cl_sks: dance_cancel_skshift {
             compatible = "zmk,behavior-mod-morph";
             label = "DANCE_CANCEL_SKSHIFT";
-            bindings = <&sk LEFT_SHIFT>, <&none>;
+            bindings = <&sk LEFT_SHIFT>, <&kp A>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
 
-       lt_td_sks: layer_dance_cancel_skshift {
+        lt_td_sks: layer_dance_cancel_skshift {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_DANCE_CANCEL_SKSHIFT";
             bindings = <&mo>, <&td_cl_sks>;
