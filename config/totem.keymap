@@ -215,6 +215,7 @@
             bindings = <&kp RETURN>;
             key-positions = <16 17 18>;
             layers = <0 3>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_return_l {
@@ -223,11 +224,46 @@
             layers = <1>;
         };
 
-        combo_num {
+        combo_num_layer {
             bindings = <&mo_sl 3 3>;
             key-positions = <11 12 13>;
             require-prior-idle-ms = <150>;
             layers = <0>;
+        };
+
+        combo_plus_r {
+            bindings = <&kp PLUS>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
+        };
+
+        combo_plus_l {
+            bindings = <&kp PLUS>;
+            key-positions = <12 13>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
+        };
+
+        combo_minus_l {
+            bindings = <&kp MINUS>;
+            key-positions = <11 12>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
+        };
+
+        combo_minus_r {
+            bindings = <&kp MINUS>;
+            key-positions = <17 18>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
+        };
+
+        combo_num_cancel {
+            bindings = <&kp K_CANCEL>;
+            key-positions = <11 12 13>;
+            require-prior-idle-ms = <150>;
+            layers = <3>;
         };
     };
 
@@ -252,20 +288,20 @@
         Base {
             label = "Base";
             bindings = <
-       &kp Q            &kp W            &kp E                    &kp R                  &kp T        &kp Y           &kp U                &kp I                &kp O            &kp P
-       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G        &kp H           &hmr LEFT_SHIFT J    &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
-&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B        &kp N           &kp M                &kp COMMA            &kp PERIOD       &kp MINUS                   &none
-                                         &none                    &lt 3 SPACE            &lt 2 TAB    &lt 2 CAPSLOCK  &lt_sk 2 LEFT_SHIFT  &none
+       &kp Q            &kp W            &kp E                    &kp R                  &kp T      &kp Y         &kp U                &kp I                &kp O            &kp P
+       &hml LEFT_GUI A  &hml LEFT_ALT S  &hml_und LEFT_CONTROL D  &hml_und LEFT_SHIFT F  &kp G      &kp H         &hmr LEFT_SHIFT J    &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SINGLE_QUOTE
+&none  &kp Z            &kp X            &kp C                    &kp V                  &kp B      &kp N         &kp M                &kp COMMA            &kp PERIOD       &kp MINUS                   &none
+                                         &none                    &lt 1 SPACE            &kp TAB    &kp CAPSLOCK  &lt_sk 2 LEFT_SHIFT  &none
             >;
         };
 
         SymUtil {
             label = "SymUtil";
             bindings = <
-       &morph_qstn     &kp PERCENT        &kp DOLLAR       &kp AMPERSAND  &none        &none      &kp RIGHT_PARENTHESIS            &kp RIGHT_BRACKET              &kp RIGHT_BRACE           &kp BACKSLASH
-       &unredo         &kp LC(X)          &kp LC(C)        &kp LC(V)      &kp EQUAL    &kp PIPE   &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_CONTROL LEFT_BRACKET  &mt RIGHT_ALT LEFT_BRACE  &kp UNDER
-&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT     &none        &kp RA(N)  &none                            &kp SEMICOLON                  &kp COLON                 &none          &none
-                                          &none            &none          &none        &none      &mo 4                            &none
+       &kp END         &kp PAGE_UP        &kp PAGE_DOWN    &kp HOME    &none    &none      &kp RIGHT_PARENTHESIS            &kp RIGHT_BRACKET              &kp RIGHT_BRACE           &kp BACKSLASH
+       &unredo         &kp LC(X)          &kp LC(C)        &kp LC(V)   &none    &kp PIPE   &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LEFT_CONTROL LEFT_BRACKET  &mt RIGHT_ALT LEFT_BRACE  &kp UNDER
+&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &none    &kp RA(N)  &none                            &kp SEMICOLON                  &kp COLON                 &none          &none
+                                          &none            &none       &none    &none      &mo 4                            &none
             >;
         };
 
@@ -282,10 +318,10 @@
 
         Num {
             bindings = <
-       &kp END         &kp PAGE_UP        &kp LS(PAGE_DOWN)  &kp HOME    &none    &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp SLASH
-       &unredo         &kp LC(X)          &kp LC(C)          &kp LC(V)   &none    &kp DOT       &kp N4  &kp N5  &kp N6  &kp PLUS
-&none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp C_NEXT  &none    &kp CARET     &kp N1  &kp N2  &kp N3  &kp MINUS  &none
-                                          &none              &none       &none    &kp EQUAL     &kp N0  &none
+       &kp SLASH     &kp N7  &kp N8  &kp N9  &kp CARET    &kp CARET  &kp N7  &kp N8  &kp N9  &kp SLASH
+       &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp DOT      &kp DOT    &kp N4  &kp N5  &kp N6  &kp ASTERISK
+&none  &none         &kp N1  &kp N2  &kp N3  &none        &none      &kp N1  &kp N2  &kp N3  &none         &none
+                             &none   &kp N0  &kp EQUAL    &kp EQUAL  &kp N0  &none
             >;
 
             label = "Num";
