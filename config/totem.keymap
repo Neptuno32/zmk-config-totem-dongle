@@ -10,9 +10,9 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <behaviors/num_word.dtsi>
 
 #define Base        0
 #define Num         1
@@ -131,6 +131,17 @@
             flavor = "tap-preferred";
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
+        };
+
+        mo_sl: mo_layer_sk_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_LAYER_SK_LAYER";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
         };
     };
 
