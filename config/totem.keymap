@@ -176,17 +176,17 @@
             require-prior-idle-ms = <150>;
         };
 
-        combo_num_pscrn {
+        combo_util_pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <12 11>;
-            layers = <3>;
+            layers = <1>;
             require-prior-idle-ms = <150>;
         };
 
-        combo_num_mute {
+        combo_util_mute {
             bindings = <&kp C_MUTE>;
             key-positions = <23 22>;
-            layers = <3>;
+            layers = <1>;
             require-prior-idle-ms = <150>;
         };
 
@@ -194,12 +194,13 @@
             bindings = <&kp C_MUTE>;
             key-positions = <28 29>;
             require-prior-idle-ms = <150>;
+            layers = <2>;
         };
 
-        combo_num_pause {
+        combo_util_pause {
             bindings = <&kp C_PAUSE>;
             key-positions = <13 12>;
-            layers = <3>;
+            layers = <1>;
             require-prior-idle-ms = <150>;
         };
 
@@ -207,20 +208,26 @@
             bindings = <&kp C_PAUSE>;
             key-positions = <17 16>;
             require-prior-idle-ms = <150>;
+            layers = <2>;
         };
 
         combo_return_r {
             bindings = <&kp RETURN>;
             key-positions = <16 17 18>;
             layers = <0 3>;
-            require-prior-idle-ms = <150>;
         };
 
         combo_return_l {
             bindings = <&kp RETURN>;
             key-positions = <11 12 13>;
             layers = <1>;
+        };
+
+        combo_num {
+            bindings = <&mo_sl 3 3>;
+            key-positions = <11 12 13>;
             require-prior-idle-ms = <150>;
+            layers = <0>;
         };
     };
 
