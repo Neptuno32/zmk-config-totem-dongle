@@ -16,7 +16,10 @@ manifest:
     - name: zmk-rgbled-widget
       url: https://github.com/caksoylar/zmk-rgbled-widget
       revision: main
-    - name: zmk-adaptive-key
+    #- name: zmk-adaptive-key
+      #remote: urob
+      #revision: main
+    - name: zmk-auto-layer
       remote: urob
       revision: main
     - name: zmk-raw-hid # <-- Raw HID module
