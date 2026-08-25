@@ -148,7 +148,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_NUM_LAYER";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             bindings = <&mo 3>, <&num_word>;
         };
     };
@@ -229,7 +229,7 @@
         combo_return_l {
             bindings = <&kp RETURN>;
             key-positions = <11 12 13>;
-            layers = <1>;
+            layers = <1 3>;
         };
 
         combo_num_layer {
@@ -263,13 +263,6 @@
         combo_minus_r {
             bindings = <&kp MINUS>;
             key-positions = <17 18>;
-            require-prior-idle-ms = <150>;
-            layers = <3>;
-        };
-
-        combo_num_cancel {
-            bindings = <&kp K_CANCEL>;
-            key-positions = <12 13 11>;
             require-prior-idle-ms = <150>;
             layers = <3>;
         };
@@ -326,10 +319,10 @@
 
         Num {
             bindings = <
-       &kp SLASH     &kp N7  &kp N8  &kp N9  &kp CARET    &kp CARET  &kp N7  &kp N8  &kp N9  &kp SLASH
-       &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp DOT      &kp DOT    &kp N4  &kp N5  &kp N6  &kp ASTERISK
-&none  &none         &kp N1  &kp N2  &kp N3  &none        &none      &kp N1  &kp N2  &kp N3  &none         &none
-                             &none   &kp N0  &kp EQUAL    &kp EQUAL  &kp N0  &none
+       &kp SLASH     &kp N7  &kp N8  &kp N9  &kp CARET       &kp CARET  &kp N7  &kp N8  &kp N9  &kp SLASH
+       &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp DOT         &kp DOT    &kp N4  &kp N5  &kp N6  &kp ASTERISK
+&none  &none         &kp N1  &kp N2  &kp N3  &none           &none      &kp N1  &kp N2  &kp N3  &none         &none
+                             &none   &kp N0  &kp K_CANCEL    &kp EQUAL  &kp N0  &none
             >;
 
             label = "Num";
