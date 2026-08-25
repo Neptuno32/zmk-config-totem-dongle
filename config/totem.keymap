@@ -143,14 +143,6 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
-
-        td_num_layer: tap_dance_num_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_NUM_LAYER";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&mo 3>, <&num_word 3>;
-        };
     };
 
     combos {
