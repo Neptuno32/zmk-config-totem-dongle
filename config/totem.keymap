@@ -144,12 +144,22 @@
             flavor = "tap-preferred";
         };
 
-        td_num_layer: tap_dance_num_layer {
+        td_num: tap_dance_num {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_NUM_LAYER";
+            label = "TAP_DANCE_NUM";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mo 3>, <&num_word 3>;
+            bindings = <&none>, <&num_word 3>;
+        };
+
+        ht_td_num: hold_tap_td_num {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_TD_NUM";
+            #binding-cells = <1>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&td_num>;
         };
     };
 
