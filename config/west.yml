@@ -24,9 +24,9 @@ manifest:
       revision: v0.3
     - name: zmk-raw-hid # <-- Raw HID module
       remote: zzeneg
-      revision: v0.3
+      revision: main
     - name: zmk-keypeek-layer-notifier # <-- KeyPeek module
       remote: srwi
-      revision: v0.3
+      revision: master
   self:
     path: config
