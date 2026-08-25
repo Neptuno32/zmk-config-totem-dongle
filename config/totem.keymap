@@ -213,13 +213,6 @@
             layers = <1 3>;
         };
 
-        combo_num_layer {
-            bindings = <&ht_td_num 3 0>;
-            key-positions = <12 13>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
         combo_plus_r {
             bindings = <&kp PLUS>;
             key-positions = <16 17>;
