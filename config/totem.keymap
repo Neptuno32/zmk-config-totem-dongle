@@ -149,7 +149,7 @@
             label = "TAP_DANCE_NUM_LAYER";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mo 3>, <&kp A>;
+            bindings = <&mo 3>, <&num_word 3>;
         };
     };
 
