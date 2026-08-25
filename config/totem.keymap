@@ -143,6 +143,27 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
+        smart_num: smart_num {
+            compatible = "zmk,behavior-num-word";
+            #binding-cells = <0>;
+            layers = <3>;
+        };
+
+        td_num: td_num {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&smart_num>;
+        };
+
+        ht_td_num: hold_tap_td_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&td_num>;
+        };
     };
 
     combos {
