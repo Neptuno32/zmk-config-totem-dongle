@@ -233,7 +233,7 @@
         };
 
         combo_num_layer {
-            bindings = <&td_num_layer>;
+            bindings = <&mo_sl 3 3>;
             key-positions = <12 13>;
             require-prior-idle-ms = <150>;
             layers = <0>;
