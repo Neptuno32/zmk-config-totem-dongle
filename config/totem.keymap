@@ -133,17 +133,6 @@
             quick-tap-ms = <100>;
         };
 
-        mo_sl: mo_layer_sk_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_LAYER_SK_LAYER";
-            bindings = <&mo>, <&num_word>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-        };
-
         td_num: tap_dance_num {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_NUM";
@@ -243,7 +232,7 @@
         };
 
         combo_num_layer {
-            bindings = <&td_num_layer>;
+            bindings = <&ht_td_num 3 0>;
             key-positions = <12 13>;
             require-prior-idle-ms = <150>;
             layers = <0>;
