@@ -292,8 +292,6 @@
         num_word_to_num: num_word_to_num_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
             bindings = <&num_word 3>;
         };
     };
