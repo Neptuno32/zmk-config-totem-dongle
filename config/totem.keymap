@@ -147,15 +147,15 @@
         td_num_word: tap_dance_num_word {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_NUM_WORD";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&num_word 3>;
+            bindings = <&none>, <&num_word>;
         };
 
         ht_num_layer: hold_tap_num_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_NUM_LAYER";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
