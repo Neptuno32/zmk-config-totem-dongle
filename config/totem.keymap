@@ -269,6 +269,11 @@
             require-prior-idle-ms = <150>;
             layers = <3>;
         };
+
+        combo_num {
+            bindings = <&ht_num_layer 3 0>;
+            key-positions = <12 13>;
+        };
     };
 
     macros {
