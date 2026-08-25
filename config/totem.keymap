@@ -143,24 +143,6 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
-
-        td_num_word: tap_dance_num_word {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_NUM_WORD";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&num_word_to_num>;
-        };
-
-        ht_num_layer: hold_tap_num_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_NUM_LAYER";
-            #binding-cells = <1>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&td_num_word>;
-        };
     };
 
     combos {
@@ -271,7 +253,7 @@
         };
 
         combo_num {
-            bindings = <&ht_num_layer 3>;
+            bindings = <&mo_sl 3 3>;
             key-positions = <12 13>;
         };
     };
@@ -288,12 +270,6 @@
                 <&mo 3 &kp SPACE>;
 
             label = "SPACE_NUM";
-        };
-
-        num_word_to_num: num_word_to_num_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&num_word 3>;
         };
     };
 
