@@ -143,17 +143,21 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
-        smart_num: smart_num {
+
+        auto_num: auto_num_layer {
             compatible = "zmk,behavior-num-word";
             #binding-cells = <0>;
             layers = <3>;
+            label = "AUTO_NUM_LAYER";
         };
 
-        td_num: td_num {
+        td_num: tap_dance_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&smart_num>;
+            bindings = <&none>, <&auto_num>;
+
+            label = "TAP_DANCE_NUM";
         };
 
         ht_td_num: hold_tap_td_num {
