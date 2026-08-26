@@ -154,7 +154,7 @@
         td_num: tap_dance_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&none>, <&auto_num>;
 
             label = "TAP_DANCE_NUM";
