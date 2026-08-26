@@ -278,7 +278,7 @@
         };
 
         combo_num {
-            bindings = <&mo_sl 3 3>;
+            bindings = <&ht_td_num 3 0>;
             key-positions = <12 13>;
         };
     };
