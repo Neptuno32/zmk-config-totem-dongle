@@ -7,3 +7,4 @@ zephyr/
 zmk/
 zmk-*/
 optional/
+draw/*.yaml
